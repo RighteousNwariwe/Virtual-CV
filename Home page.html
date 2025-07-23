@@ -9,34 +9,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for contact icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shlop font from Google Fonts (via fonts.cdnfonts.com) -->
+    <link href="https://fonts.cdnfonts.com/css/shlop" rel="stylesheet">
 </head>
 <body>
+    <button id="menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+    <nav id="sidebar" class="sidebar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#cv">Download CV</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#extra">Extra Curricular</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="sidebar-overlay"></div>
     <video autoplay muted loop id="bg-video">
-        <source src="https://videos.pexels.com/video-files/31699019/13506132_1920_1080_30fps.mp4" type="video/mp4">
+        <source src="https://motionbgs.com/media/4260/matrix-rain-codes.960x540.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#cv">Download CV</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#extra">Extra Curricular</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <section id="home" class="section home-section">
-        <div class="overlay">
-            <img src="my pic.jpg" alt="Profile Picture" class="profile-pic">
-            <h1 class="title">Code Blooded Soldier</h1>
-            <h2 class="name">Righteous Onyedi Nhlanhla Mpila Nwariwe</h2>
-            <p class="subtitle">Ambitious IT Student | Full-Stack Developer | Cybersecurity Enthusiast</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/righteous-nwariwe-01023727a" target="_blank" rel="noopener" title="LinkedIn"><span class="icon-linkedin"></span></a>
-                <a href="https://github.com/RighteousNwariwe/Righteous074" target="_blank" rel="noopener" title="GitHub"><span class="icon-github"></span></a>
-                <a href="mailto:righteousonyedi@gmail.com" title="Email"><span class="icon-email"></span></a>
-            </div>
+      <div class="home-flex">
+        <div class="home-texts">
+          <h1 class="title drip-blood animated-text">CODE BLOODED SOLDIER
+            <span class="drip d1"></span>
+            <span class="drip d2"></span>
+            <span class="drip d3"></span>
+            <span class="drip d4"></span>
+          </h1>
+          <h2 class="name animated-text">Righteous Onyedi Nhlanhla Mpila Nwariwe</h2>
+          <p class="subtitle animated-text">Ambitious IT Student | Full-Stack Developer | Cybersecurity Enthusiast</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/righteous-nwariwe-01023727a" target="_blank" rel="noopener" title="LinkedIn"><span class="icon-linkedin"></span></a>
+            <a href="https://github.com/RighteousNwariwe/Righteous074" target="_blank" rel="noopener" title="GitHub"><span class="icon-github"></span></a>
+            <a href="mailto:righteousonyedi@gmail.com" title="Email"><span class="icon-email"></span></a>
+          </div>
         </div>
+        <div class="home-pic">
+          <img src="my pic.jpg" alt="Profile Picture" class="profile-pic-large">
+        </div>
+      </div>
     </section>
     <section id="about" class="section about-section">
         <h2>About Me</h2>
@@ -118,30 +133,85 @@
     </section>
     <section id="extra" class="section extra-section">
         <h2>Extra Curricular & Industry Involvement</h2>
-        <ul>
-            <li>Geekulcha Hackathon Participant (2023)</li>
-            <li>GEEXPO Judge at NWU VAAL (2024)</li>
-            <li>IT WEB Security Summit Participant (2024)</li>
+        <ul class="extra-list">
+            <li><span class="fa-solid fa-basketball-ball" style="color:#ff9800;"></span> Basketball Team Member</li>
+            <li><span class="fa-solid fa-chess-knight" style="color:#fff; text-shadow:0 0 4px #000;"></span> Chess Club Participant</li>
+            <li><span class="fa-solid fa-user-secret" style="color:#00ff6a;"></span> Hacking & Cybersecurity Enthusiast</li>
+            <li><span class="fa-solid fa-laptop-code" style="color:#6ec1e4;"></span> Geekulcha Hackathon Participant (2023)</li>
+            <li><span class="fa-solid fa-gavel" style="color:#b30000;"></span> GEEXPO Judge at NWU VAAL (2024)</li>
+            <li><span class="fa-solid fa-shield-alt" style="color:#00ff6a;"></span> IT WEB Security Summit Participant (2024)</li>
         </ul>
     </section>
     <section id="contact" class="section contact-section">
-        <h2>Contact Details</h2>
-        <ul>
-            <li><strong>Location:</strong> 126 Fir Avenue Primrose, Johannesburg, South Africa</li>
-            <li><strong>Phone:</strong> 0680022727</li>
-            <li><strong>Email:</strong> <a href="mailto:righteousonyedi@gmail.com">righteousonyedi@gmail.com</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/righteous-nwariwe-01023727a" target="_blank" rel="noopener">righteous-nwariwe-01023727a</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/RighteousNwariwe/Righteous074" target="_blank" rel="noopener">RighteousNwariwe/Righteous074</a></li>
-        </ul>
+      <div class="contact-title">
+        <h2>Get in Touch</h2>
+        <p>I'm always open to opportunities and collaborations. Reach out through any channel below!</p>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p>Send me an email anytime. I'll respond as soon as possible.</p>
+            <a href="mailto:righteousonyedi@gmail.com" class="contact-link">righteousonyedi@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-info">
+            <h3>LinkedIn</h3>
+            <p>Connect with me on LinkedIn for professional networking.</p>
+            <a href="https://www.linkedin.com/in/righteous-nwariwe-01023727a" target="_blank" rel="noopener" class="contact-link">View Profile</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-info">
+            <h3>GitHub</h3>
+            <p>Check out my projects and code contributions.</p>
+            <a href="https://github.com/RighteousNwariwe/Righteous074" target="_blank" rel="noopener" class="contact-link">RighteousNwariwe/Righteous074</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>Call me directly for urgent matters or quick chats.</p>
+            <a href="tel:0680022727" class="contact-link">068 002 2727</a>
+          </div>
+        </div>
+      </div>
     </section>
     <script>
+    // Sidebar menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('active');
+    });
+    sidebarOverlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('active');
+    });
     // Smooth scroll for nav links
-    document.querySelectorAll('.navbar a').forEach(link => {
+    document.querySelectorAll('#sidebar a').forEach(link => {
       link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href.startsWith('#')) {
           e.preventDefault();
           document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('active');
         }
       });
     });
@@ -175,5 +245,6 @@
       });
     });
     </script>
-</body>
+    <script src="features.js"></script>
+  </body>
 </html>
