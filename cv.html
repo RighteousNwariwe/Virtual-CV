@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Righteous Nwariwe - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #ff0040;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #ff0040;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info span {
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h3 {
+            color: #ff0040;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ff0040;
+            padding-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .skill-category h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-item {
+            background: #f8f9fa;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            border: 1px solid #e9ecef;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #ff0040;
+            background: #f8f9fa;
+        }
+        
+        .experience-item h4, .education-item h4, .project-item h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .experience-item ul, .project-features ul {
+            margin-left: 20px;
+        }
+        
+        .experience-item li, .project-features li {
+            margin-bottom: 5px;
+        }
+        
+        .project-tech {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .project-description {
+            margin-bottom: 10px;
+        }
+        
+        .project-features h5 {
+            color: #ff0040;
+            margin-bottom: 5px;
+        }
+        
+        .extra-list {
+            list-style: none;
+        }
+        
+        .extra-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .extra-list li::before {
+            content: "•";
+            color: #ff0040;
+            position: absolute;
+            left: 0;
+        }
+        
+        @media print {
+            .cv-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1>Righteous Onyedi Nhlanhla Mpila Nwariwe</h1>
+            <h2>Ambitious IT Student | Full-Stack Developer | Cybersecurity Enthusiast</h2>
+            <div class="contact-info">
+                <span>📧 righteousonyedi@gmail.com</span>
+                <span>📱 068 002 2727</span>
+                <span>📍 Johannesburg, South Africa</span>
+                <span>💼 LinkedIn: righteous-nwariwe-01023727a</span>
+                <span>🐙 GitHub: RighteousNwariwe</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Professional Summary</h3>
+            <p>Ambitious Information Technology student with a solid foundation in programming, advanced skills in C#, HTML, CSS, JavaScript, and emerging expertise in MongoDB and PowerBI. Passionate about full-stack development and cybersecurity, with hands-on experience in developing web applications and managing team projects. Committed to using technical skills to make impactful contributions to technology and the broader community.</p>
+        </div>
+
+        <div class="section">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages & Technologies</h4>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C#</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Analytics</h4>
+                    <div class="skill-list">
+                        <span class="skill-item">PowerBI</span>
+                        <span class="skill-item">Database Management</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Visual Studio</span>
+                        <span class="skill-item">.NET Framework</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Professional Skills</h3>
+            <div class="skill-list">
+                <span class="skill-item">Communication</span>
+                <span class="skill-item">Leadership</span>
+                <span class="skill-item">Teamwork</span>
+                <span class="skill-item">Adaptability</span>
+                <span class="skill-item">Problem-Solving</span>
+                <span class="skill-item">Work Under Pressure</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Experience</h3>
+            
+            <div class="experience-item">
+                <h4>Web Developer & Data Handling, SneakyFinds</h4>
+                <div class="date">January 2025 – Present</div>
+                <ul>
+                    <li>Full-stack development, database administration, UI/UX design, business analysis, and technical support</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Recruitment Officer, Geekulcha (NWU Vaal Campus)</h4>
+                <div class="date">March 2024 – November 2024</div>
+                <ul>
+                    <li>Planned and developed web applications, troubleshooting and resolving issues in applications</li>
+                    <li>Integrated databases using C# and facilitated HTML/CSS training for students</li>
+                    <li>Managed solo and team projects, translating requirements into efficient systems</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Treasurer, Faculty of Natural and Agricultural Sciences (FNAS NWU)</h4>
+                <div class="date">2024/2025</div>
+                <ul>
+                    <li>Managed budgets, financial records, and reporting for the faculty</li>
+                    <li>Collaborated with faculty members to allocate funds and presented financial updates</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h4>Class Representative, Module MTHS 225</h4>
+                <div class="date">2024</div>
+                <ul>
+                    <li>Communication liaison between students and faculty, addressing class needs</li>
+                    <li>Organised study sessions and assisted in resolving concerns</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Education & Certifications</h3>
+            
+            <div class="education-item">
+                <h4>North-West University, Vanderbijlpark</h4>
+                <div class="date">February 2023 – Present</div>
+                <p>Bachelor of Science in Information Technology (Currently pursuing)</p>
+            </div>
+
+            <div class="education-item">
+                <h4>Diploma in Quantum Computing & Programming</h4>
+                <div class="date">July 2023</div>
+                <p>QSouthAfrica</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Major Projects</h3>
+            
+            <div class="project-item">
+                <h4>Intern-Job-Portal</h4>
+                <div class="project-tech">Frontend Web Application | HTML/CSS/JavaScript</div>
+                <div class="project-description">A comprehensive internship and job placement portal designed to connect students with employers. Features include user authentication, job listings with advanced search filters, application tracking, and responsive design.</div>
+                <div class="project-features">
+                    <h5>Key Features:</h5>
+                    <ul>
+                        <li>User Authentication (Student & Employer roles)</li>
+                        <li>Job Posting & Search with Filters</li>
+                        <li>Application Tracking System</li>
+                        <li>Profile Management</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>ClearVue-Sales-Report</h4>
+                <div class="project-tech">Full-Stack Application | MongoDB | PowerBI | JavaScript</div>
+                <div class="project-description">A modern sales reporting system for ClearVue Ltd, featuring comprehensive analytics and reporting capabilities. Built with MongoDB for flexible data storage and PowerBI for advanced business analytics visualization.</div>
+                <div class="project-features">
+                    <h5>Key Features:</h5>
+                    <ul>
+                        <li>MongoDB NoSQL Database Integration</li>
+                        <li>PowerBI Analytics Dashboard</li>
+                        <li>Customer Lifetime Value (LTV) Calculations</li>
+                        <li>Sales Processing & Inventory Management</li>
+                        <li>RESTful API Architecture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>SneakyFinds - Online Thrift Store</h4>
+                <div class="project-tech">E-commerce Website | HTML/CSS/JavaScript</div>
+                <div class="project-description">A complete online thrift store promoting sustainable shopping with comprehensive e-commerce functionality including cart management, user authentication, and administrative controls.</div>
+                <div class="project-features">
+                    <h5>Key Features:</h5>
+                    <ul>
+                        <li>Product Catalog & Shopping Cart</li>
+                        <li>User Authentication & Profiles</li>
+                        <li>Order Tracking System</li>
+                        <li>Admin Management Panel</li>
+                        <li>Email Notifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h4>Student-Funding Calculator</h4>
+                <div class="project-tech">Desktop Application | C# | .NET Framework</div>
+                <div class="project-description">A C# desktop application developed during first-year BSc IT studies for calculating student funding based on specific criteria and calculations.</div>
+                <div class="project-features">
+                    <h5>Key Features:</h5>
+                    <ul>
+                        <li>C# Programming Implementation</li>
+                        <li>.NET Framework 4.7.2</li>
+                        <li>Student Funding Calculations</li>
+                        <li>Desktop Application Interface</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Extra Curricular & Industry Involvement</h3>
+            <ul class="extra-list">
+                <li>Basketball Team Member</li>
+                <li>Chess Club Participant</li>
+                <li>Hacking & Cybersecurity Enthusiast</li>
+                <li>Geekulcha Hackathon Participant (2023)</li>
+                <li>GEEXPO Judge at NWU VAAL (2024)</li>
+                <li>IT WEB Security Summit Participant (2024)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
