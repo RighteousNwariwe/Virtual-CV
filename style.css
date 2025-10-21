@@ -1610,3 +1610,13 @@ body::before {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(255,0,64,0.3);
 }
+
+/* View all projects CTA */
+.view-all-section {
+  text-align: center;
+}
+
+.view-all-cta {
+  display: flex;
+  justify-content: center;
+}
