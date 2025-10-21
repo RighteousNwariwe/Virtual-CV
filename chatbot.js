@@ -7,7 +7,7 @@ class PortfolioChatbot {
             name: "Righteous Onyedi Nhlanhla Mpila Nwariwe",
             title: "Ambitious IT Student | Full-Stack Developer | Cybersecurity Enthusiast",
             skills: {
-                technical: ["Python", "C#", "HTML/CSS", "JavaScript", "Java", "Database Management"],
+                technical: ["Python", "C#", "HTML/CSS", "JavaScript", "Java", "Database Management", "PowerBI", "MongoDB"],
                 professional: ["Communication", "Leadership", "Teamwork", "Adaptability", "Problem-Solving", "Work Under Pressure"]
             },
             experience: [
@@ -29,10 +29,13 @@ class PortfolioChatbot {
                 }
             ],
             projects: [
+                "Intern-Job-Portal - Frontend web application for connecting students with employers",
+                "ClearVue-Sales-Report - Full-stack application with MongoDB and PowerBI analytics",
+                "SneakyFinds - Online thrift store with e-commerce functionality",
+                "Student-Funding Calculator - C# desktop application",
                 "CarServPro - HTML project",
                 "CMPG111-Semester1-2023 - Python assignments",
                 "Data-Structure-projects - Collection of 2nd year assignments",
-                "SneakyFinds - Online thrift store website",
                 "Virtual-Portfolio - This portfolio website"
             ],
             contact: {
