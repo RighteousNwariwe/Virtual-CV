@@ -1391,3 +1391,147 @@ html, body {
     right: -15px;
   }
 }
+
+/* ===== Professional polish ===== */
+html, body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Improve overall contrast over background video */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(0,0,0,0.55), rgba(0,0,0,0.85));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Elevate sections for readability */
+.section {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto 64px auto;
+  padding: 32px 24px;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.section h2 {
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+
+.section p {
+  line-height: 1.7;
+}
+
+/* Home hero tweaks */
+.home-section .title {
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Buttons */
+.custom-btn {
+  background: linear-gradient(135deg, #ff0040, #cc0033);
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 24px rgba(255,0,64,0.25);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.custom-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255,0,64,0.35);
+}
+
+.custom-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(255,0,64,0.25);
+}
+
+/* Cards in contact section */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,0,64,0.35);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+}
+
+.contact-link {
+  color: #ffd6e0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Skills layout tightening */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.skills-group {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+/* Experience items */
+.exp-item {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+/* Education items */
+.edu-item {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+/* Extra list spacing */
+.extra-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 16px;
+}
