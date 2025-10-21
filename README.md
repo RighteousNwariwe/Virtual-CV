@@ -1,5 +1,5 @@
 Overview
-The Virtual CV (Curriculum Vitae) is an interactive, web-based digital portfolio designed to showcase your professional background, skills, achievements, and creative projects. It serves as a dynamic alternative to traditional PDF resumes by presenting your credentials in an accessible, visual, and responsive format hosted online.
+The Virtual CV (Curriculum Vitae) is an interactive, web-based digital portfolio designed to showcase my professional background, skills, achievements, and creative projects. It serves as a dynamic alternative to traditional PDF resumes by presenting my credentials in an accessible, visual, and responsive format hosted online.
 
 📁 Structure and Key Elements
 1. Home Page
@@ -117,8 +117,7 @@ Highlights both technical skills and personal brand
 
 Reflects modern web development competency
 
-🚀 Future Improvements (Optional)
-Add downloadable PDF resume
+🚀 Future Improvements
 
 Integrate a blog or updates section
 
