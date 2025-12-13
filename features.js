@@ -47,24 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleFadeIn);
   handleFadeIn();
 
-  // 4. Dark/light mode toggle
-  const modeBtn = document.createElement('button');
-  modeBtn.id = 'mode-toggle';
-  modeBtn.innerHTML = '🌙';
-  modeBtn.style.position = 'fixed';
-  modeBtn.style.bottom = '24px';
-  modeBtn.style.right = '24px';
-  modeBtn.style.zIndex = '3002';
-  modeBtn.style.background = '#111';
-  modeBtn.style.color = '#00ff6a';
-  modeBtn.style.border = 'none';
-  modeBtn.style.borderRadius = '50%';
-  modeBtn.style.width = '48px';
-  modeBtn.style.height = '48px';
-  modeBtn.style.fontSize = '1.5rem';
-  modeBtn.style.cursor = 'pointer';
-  document.body.appendChild(modeBtn);
-
   function setTheme(mode) {
     if (mode === 'light') {
       document.body.classList.add('light-mode');
