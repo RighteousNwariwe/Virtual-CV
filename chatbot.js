@@ -3,51 +3,127 @@ class PortfolioChatbot {
     constructor() {
         this.isOpen = false;
         this.messages = [];
+
         this.portfolioData = {
             name: "Righteous Onyedi Nhlanhla Mpila Nwariwe",
-            title: "Ambitious IT Student | Full-Stack Developer | Cybersecurity Enthusiast",
+            title: "Data Analyst | Full-Stack Developer | AI & Data Enthusiast",
+            profileSummary:
+                "An ambitious tech enthusiast with strong programming skills in C#, Java, Python, JavaScript, SQL, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
             skills: {
-                technical: ["Python", "C#", "HTML/CSS", "JavaScript", "Java", "Database Management", "PowerBI", "MongoDB"],
-                professional: ["Communication", "Leadership", "Teamwork", "Adaptability", "Problem-Solving", "Work Under Pressure"]
+                technical: [
+                    "Python", "C#", "HTML", "CSS", "JavaScript", "Java", "C++",
+                    "SQL", "MongoDB", "Oracle", "MySQL", "Power BI",
+                    "Google Sheets", "Excel", "Firebase"
+                ],
+                software: [
+                    "Web Application Development",
+                    "Full-Stack Development",
+                    "UI/UX Design",
+                    "Database Management",
+                    "API Integration"
+                ],
+                professional: [
+                    "Communication",
+                    "Leadership",
+                    "Teamwork",
+                    "Adaptability",
+                    "Problem Solving",
+                    "Ability to Work Under Pressure"
+                ]
             },
+            education: {
+                institution: "North-West University, Vanderbijlpark",
+                degree: "Bachelor of Science (BSc) in Information Technology",
+                period: "February 2023 – 2025"
+            },
+            certifications: [
+                "Diploma in Quantum Computing & Programming – QSouthAfrica (July 2023)",
+                "FNB App Academy 2025 – Certificate in Full Stack Development (24 July 2025)"
+            ],
             experience: [
                 {
-                    title: "Recruitment Officer, Geekulcha (NWU Vaal Campus)",
+                    title: "Recruitment Officer – Geekulcha (NWU Vaal Campus)",
                     period: "March 2024 – November 2024",
-                    responsibilities: [
-                        "Planned and developed web applications, troubleshooting and resolving issues",
-                        "Integrated databases using C# and facilitated HTML/CSS training for students",
-                        "Managed solo and team projects, translating requirements into efficient systems"
+                    details: [
+                        "Planned and developed web applications",
+                        "Integrated databases using C#",
+                        "Facilitated HTML/CSS training",
+                        "Managed solo and team-based projects"
+                    ]
+                },
+                {
+                    title: "Treasurer – Faculty of Natural and Agricultural Sciences (NWU)",
+                    period: "2024 – 2025",
+                    details: [
+                        "Managed faculty budgets and financial records",
+                        "Prepared financial reports",
+                        "Ensured transparency and accountability"
+                    ]
+                },
+                {
+                    title: "Class Representative – MTHS 225",
+                    period: "2024",
+                    details: [
+                        "Liaison between students and lecturers",
+                        "Organised study sessions",
+                        "Resolved academic concerns"
+                    ]
+                },
+                {
+                    title: "Web Developer & Data Handler – SneakyFinds (Self-Employed)",
+                    period: "Jan 2025 – Dec 2025",
+                    details: [
+                        "Developed full-stack platform using Firebase",
+                        "Designed UI/UX",
+                        "Managed database and backend logic",
+                        "Conducted business and market analysis"
                     ]
                 }
             ],
-            education: [
+            projects: [
                 {
-                    institution: "North-West University (Vaal Campus)",
-                    degree: "Bachelor of Science in Information Technology",
-                    status: "Currently pursuing"
+                    name: "ClearVue Sales Report System",
+                    description:
+                        "Sales reporting system with MongoDB backend and Power BI analytics dashboard.",
+                    tech: "Node.js, MongoDB, Power BI, JavaScript"
+                },
+                {
+                    name: "SneakyFinds Online Thrift Store",
+                    description:
+                        "E-commerce thrift platform with authentication, cart, checkout, and admin modules.",
+                    tech: "HTML, CSS, JavaScript, Firebase"
+                },
+                {
+                    name: "API-Driven Movie Review Data Integration",
+                    description:
+                        "Automated Google Sheets solution integrating NYT and TMDB APIs with enriched movie metadata.",
+                    tech: "Google Apps Script, NYT API, TMDB API"
                 }
             ],
-            projects: [
-                "Intern-Job-Portal - Frontend web application for connecting students with employers",
-                "ClearVue-Sales-Report - Full-stack application with MongoDB and PowerBI analytics",
-                "SneakyFinds - Online thrift store with e-commerce functionality",
-                "Student-Funding Calculator - C# desktop application",
-                "CarServPro - HTML project",
-                "CMPG111-Semester1-2023 - Python assignments",
-                "Data-Structure-projects - Collection of 2nd year assignments",
-                "Virtual-Portfolio - This portfolio website"
+            industryInvolvement: [
+                "Geekulcha Hackathon Participant (2023)",
+                "GEEXPO Judge – NWU VAAL (2024)",
+                "IT WEB Security Summit Participant (2024)"
             ],
+            resources: {
+                aiInternshipVideo:
+                    "https://drive.google.com/file/d/1wREhl5bwdIhyAe9YNH_raxSR_TjTE8DH/view",
+                sneakyFindsVideo:
+                    "https://drive.google.com/file/d/1s5HLSSVDFTEj6Ib326v7aZQLlWelokQn/view",
+                googleSheetsAssignment:
+                    "https://docs.google.com/spreadsheets/d/1hD698_710CCJ_qr7qVtsz3MDTm8CxAvz9PSM6CffqVs/edit"
+            },
             contact: {
                 email: "righteousonyedi@gmail.com",
                 phone: "068 002 2727",
                 linkedin: "https://www.linkedin.com/in/righteous-nwariwe-01023727a",
-                github: "https://github.com/RighteousNwariwe"
+                github: "https://github.com/RighteousNwariwe",
+                portfolio: "https://righteousnwariwe.github.io/Virtual-Portfolio/"
             },
-            location: "Johannesburg",
+            location: "Johannesburg, South Africa",
             interests: ["Cybersecurity", "Full-Stack Development", "Programming", "Technology Trends"]
         };
-        
+
         this.initializeElements();
         this.bindEvents();
         this.addWelcomeMessage();
@@ -75,9 +151,7 @@ class PortfolioChatbot {
     toggleChat() {
         this.isOpen = !this.isOpen;
         this.window.style.display = this.isOpen ? 'flex' : 'none';
-        if (this.isOpen) {
-            this.input.focus();
-        }
+        if (this.isOpen) this.input.focus();
     }
 
     closeChat() {
@@ -86,127 +160,107 @@ class PortfolioChatbot {
     }
 
     addWelcomeMessage() {
-        this.addMessage('bot', 'Hello! I\'m your Portfolio Assistant. I can answer questions about Righteous\'s skills, experience, projects, education, and more. What would you like to know?');
+        this.addMessage(
+            'bot',
+            "Hello! I’m Righteous’s portfolio assistant. Ask me about skills, projects, certifications, experience, assignments, videos, or contact info."
+        );
     }
 
     addMessage(sender, content) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${sender}-message`;
-        
-        const messageContent = document.createElement('div');
-        messageContent.className = 'message-content';
-        messageContent.textContent = content;
-        
-        messageDiv.appendChild(messageContent);
-        this.messagesContainer.appendChild(messageDiv);
+        const div = document.createElement('div');
+        div.className = `message ${sender}-message`;
+        div.innerHTML = `<div class="message-content">${content}</div>`;
+        this.messagesContainer.appendChild(div);
         this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
     }
 
-    async sendMessage() {
-        const userInput = this.input.value.trim();
-        if (!userInput) return;
+    sendMessage() {
+        const text = this.input.value.trim();
+        if (!text) return;
 
-        this.addMessage('user', userInput);
+        this.addMessage('user', text);
         this.input.value = '';
 
-        // Show typing indicator
+        // typing indicator
         const typingDiv = document.createElement('div');
         typingDiv.className = 'message bot-message typing';
         typingDiv.innerHTML = '<div class="message-content">Typing...</div>';
         this.messagesContainer.appendChild(typingDiv);
         this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
 
-        // Simulate typing delay
         setTimeout(() => {
             typingDiv.remove();
-            const response = this.generateResponse(userInput);
+            const response = this.generateResponse(text);
             this.addMessage('bot', response);
         }, 1000 + Math.random() * 1000);
     }
 
-    generateResponse(userInput) {
-        const input = userInput.toLowerCase();
-        
+    generateResponse(text) {
+        const input = text.toLowerCase();
+
         // Greetings
-        if (input.includes('hello') || input.includes('hi') || input.includes('hey')) {
-            return 'Hello! I\'m here to help you learn about Righteous\'s portfolio. You can ask about his skills, experience, projects, education, or contact information.';
+        if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
+            return `Hi! I'm your assistant for Righteous's portfolio. You can ask about skills, experience, projects, certifications, assignments, or demo videos.`;
         }
 
-        // Skills questions
-        if (input.includes('skill') || input.includes('programming') || input.includes('technology')) {
-            if (input.includes('technical') || input.includes('programming')) {
-                return `Righteous has strong technical skills in: ${this.portfolioData.skills.technical.join(', ')}. He's particularly skilled in C# (90%) and HTML/CSS (95%).`;
-            }
-            if (input.includes('professional') || input.includes('soft')) {
-                return `His professional skills include: ${this.portfolioData.skills.professional.join(', ')}. He excels in communication (92%) and teamwork (90%).`;
-            }
-            return `Righteous has both technical and professional skills. Technical: ${this.portfolioData.skills.technical.join(', ')}. Professional: ${this.portfolioData.skills.professional.join(', ')}.`;
+        // Skills
+        if (input.includes("skill") || input.includes("programming") || input.includes("technology")) {
+            return `Righteous's technical skills: ${this.portfolioData.skills.technical.join(", ")}.<br>
+            Professional skills: ${this.portfolioData.skills.professional.join(", ")}.<br>
+            Software & tools: ${this.portfolioData.skills.software.join(", ")}.`;
         }
 
-        // Experience questions
-        if (input.includes('experience') || input.includes('work') || input.includes('job')) {
-            const exp = this.portfolioData.experience[0];
-            return `Righteous worked as a ${exp.title} from ${exp.period}. His key responsibilities included: ${exp.responsibilities.join(', ')}.`;
+        // Education
+        if (input.includes("education") || input.includes("degree") || input.includes("university") || input.includes("study")) {
+            const edu = this.portfolioData.education;
+            return `${edu.degree} at ${edu.institution} (${edu.period})`;
         }
 
-        // Education questions
-        if (input.includes('education') || input.includes('degree') || input.includes('university') || input.includes('study')) {
-            const edu = this.portfolioData.education[0];
-            return `Righteous is currently pursuing a ${edu.degree} at ${edu.institution}.`;
+        // Experience
+        if (input.includes("experience") || input.includes("work") || input.includes("job")) {
+            return this.portfolioData.experience.map(exp => 
+                `<b>${exp.title}</b> (${exp.period}): ${exp.details.join(", ")}`
+            ).join("<br><br>");
         }
 
-        // Projects questions
-        if (input.includes('project') || input.includes('github') || input.includes('code')) {
-            return `Righteous has worked on several projects including: ${this.portfolioData.projects.join(', ')}. You can view his GitHub profile at ${this.portfolioData.contact.github}`;
+        // Projects
+        if (input.includes("project") || input.includes("github") || input.includes("code")) {
+            return this.portfolioData.projects
+                .map(p => `<b>${p.name}</b>: ${p.description} [Tech: ${p.tech}]`)
+                .join("<br><br>");
         }
 
-        // Contact questions
-        if (input.includes('contact') || input.includes('email') || input.includes('phone') || input.includes('reach')) {
-            return `You can contact Righteous via email at ${this.portfolioData.contact.email}, phone at ${this.portfolioData.contact.phone}, or LinkedIn at ${this.portfolioData.contact.linkedin}.`;
+        // Certifications
+        if (input.includes("certification") || input.includes("course")) {
+            return this.portfolioData.certifications.join("<br>");
         }
 
-        // About questions
-        if (input.includes('about') || input.includes('who') || input.includes('background')) {
-            return `Righteous is an ambitious Information Technology student from Johannesburg. He's a full-stack developer and cybersecurity enthusiast with strong skills in programming and a passion for using technology to make a positive impact.`;
+        // Videos / Assignments
+        if (input.includes("ai") || input.includes("internship")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
+        if (input.includes("sneaky")) return `SneakyFinds Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
+        if (input.includes("google") || input.includes("assignment")) return `Google Sheets Assignment: ${this.portfolioData.resources.googleSheetsAssignment}`;
+
+        // Industry involvement
+        if (input.includes("industry") || input.includes("event") || input.includes("hackathon")) {
+            return this.portfolioData.industryInvolvement.join("<br>");
         }
 
-        // Location questions
-        if (input.includes('where') || input.includes('location') || input.includes('live')) {
-            return `Righteous is based in Johannesburg, South Africa.`;
-        }
-
-        // Interests/Passions
-        if (input.includes('interest') || input.includes('passion') || input.includes('hobby')) {
-            return `Righteous is passionate about ${this.portfolioData.interests.join(', ')}. He's particularly interested in cybersecurity and staying updated on technology trends.`;
-        }
-
-        // CV/Resume questions
-        if (input.includes('cv') || input.includes('resume') || input.includes('download')) {
-            return `You can download Righteous's CV directly from his portfolio. It contains detailed information about his experience, skills, and qualifications.`;
-        }
-
-        // GitHub questions
-        if (input.includes('github') || input.includes('repository') || input.includes('repo')) {
-            return `Righteous's GitHub profile contains ${this.portfolioData.projects.length} projects including web applications, Python assignments, and his portfolio. Visit ${this.portfolioData.contact.github} to see his code.`;
-        }
-
-        // LinkedIn questions
-        if (input.includes('linkedin') || input.includes('professional') || input.includes('network')) {
-            return `Connect with Righteous on LinkedIn for professional networking: ${this.portfolioData.contact.linkedin}`;
+        // Contact
+        if (input.includes("contact") || input.includes("email") || input.includes("linkedin") || input.includes("phone")) {
+            const c = this.portfolioData.contact;
+            return `Email: ${c.email}<br>Phone: ${c.phone}<br>LinkedIn: ${c.linkedin}<br>GitHub: ${c.github}`;
         }
 
         // Default response
         const responses = [
-            "That's an interesting question! I can help you learn about Righteous's skills, experience, projects, education, or contact information. Could you be more specific?",
-            "I'd be happy to help! You can ask me about Righteous's technical skills, work experience, educational background, or how to contact him.",
-            "Let me help you find information about Righteous's portfolio. Try asking about his skills, projects, experience, or contact details.",
-            "I'm here to answer questions about Righteous's portfolio. You can ask about his programming skills, work experience, education, or contact information."
+            "I can help you with Righteous's skills, experience, projects, certifications, assignments, or contact info.",
+            "Ask me about his technical or professional skills, projects, or videos.",
+            "You can ask about experience, education, industry involvement, or demo resources.",
+            "I'm here to guide you through Righteous's portfolio. Try asking about skills, projects, or contact info."
         ];
         return responses[Math.floor(Math.random() * responses.length)];
     }
 }
 
-// Initialize chatbot when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new PortfolioChatbot();
-});
+// Initialize chatbot
+document.addEventListener('DOMContentLoaded', () => new PortfolioChatbot());
