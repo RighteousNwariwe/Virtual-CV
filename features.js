@@ -206,5 +206,5 @@ document.addEventListener('DOMContentLoaded', () => {
   topBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
->>>>>>> origin/My-VP-Main-branch
+
 }); 

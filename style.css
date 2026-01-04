@@ -1155,9 +1155,9 @@ html, body {
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.18));
 }
 
-/* Chatbot Styles */
+/* Chatbot Styles - Floating Popup (Fixed Position) */
 #chatbot-container {
-  position: fixed;
+  position: fixed; /* Changed back to fixed */
   bottom: 20px;
   right: 20px;
   z-index: 1000;
@@ -1178,11 +1178,14 @@ html, body {
   border: none;
   font-weight: 600;
   font-size: 14px;
+  position: relative;
+  z-index: 1002;
 }
 
 #chatbot-toggle:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(255, 0, 64, 0.4);
+  background: linear-gradient(135deg, #ff3366, #ff0040);
 }
 
 #chatbot-toggle i {
@@ -1202,7 +1205,20 @@ html, body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 0, 64, 0.3);
   backdrop-filter: blur(10px);
-  overflow: hidden; /* ensure content stays within the window */
+  overflow: hidden;
+  z-index: 1001;
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #chatbot-header {
@@ -1213,6 +1229,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: move;
 }
 
 #chatbot-header h4 {
@@ -1230,10 +1247,16 @@ html, body {
   padding: 5px;
   border-radius: 50%;
   transition: background-color 0.2s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #chatbot-close:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 #chatbot-messages {
@@ -1263,6 +1286,18 @@ html, body {
 .message {
   max-width: 80%;
   word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .user-message {
@@ -1278,6 +1313,16 @@ html, body {
   border-radius: 18px;
   font-size: 14px;
   line-height: 1.4;
+  animation: messagePop 0.2s ease;
+}
+
+@keyframes messagePop {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .user-message .message-content {
@@ -1309,6 +1354,7 @@ html, body {
   display: flex;
   gap: 10px;
   align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #chatbot-input {
@@ -1346,19 +1392,44 @@ html, body {
   justify-content: center;
   transition: all 0.3s ease;
   font-size: 16px;
+  box-shadow: 0 4px 12px rgba(255, 0, 64, 0.3);
 }
 
 #chatbot-send:hover {
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(255, 0, 64, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 0, 64, 0.4);
 }
 
 #chatbot-send:active {
   transform: scale(0.95);
 }
 
+/* Chatbot Minimized State */
+#chatbot-container.minimized #chatbot-window {
+  display: none;
+}
+
+/* Floating animation for toggle button */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+#chatbot-toggle {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Mobile responsiveness for chatbot */
 @media (max-width: 768px) {
+  #chatbot-container {
+    bottom: 15px;
+    right: 15px;
+  }
+  
   #chatbot-window {
     width: 300px;
     height: 450px;
@@ -1381,14 +1452,18 @@ html, body {
 
 @media (max-width: 480px) {
   #chatbot-container {
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
   }
   
   #chatbot-window {
-    width: calc(100vw - 30px);
+    width: calc(100vw - 40px);
     height: 400px;
-    right: -15px;
+    right: -10px;
+  }
+  
+  #chatbot-toggle {
+    padding: 10px 14px;
   }
 }
 
