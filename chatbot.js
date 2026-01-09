@@ -38,7 +38,8 @@ class PortfolioChatbot {
             },
             certifications: [
                 "Diploma in Quantum Computing & Programming – QSouthAfrica (July 2023)",
-                "FNB App Academy 2025 – Certificate in Full Stack Development (24 July 2025)"
+                "FNB App Academy 2025 – Certificate in Full Stack Development (24 July 2025)",
+                "Introduction to SQL(Certificate) – Sololearn (07 January, 2026)"
             ],
             experience: [
                 {
