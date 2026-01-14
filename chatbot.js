@@ -95,6 +95,12 @@ class PortfolioChatbot {
                     tech: "HTML, CSS, JavaScript, Firebase"
                 },
                 {
+                    name: "Wow Foods - E-commerce Website",
+                    description:
+                        "Modern e-commerce platform for food ordering and delivery with payment integration and real-time tracking.",
+                    tech: "E-commerce Platform | Web Development | Food Delivery"
+                },
+                {
                     name: "API-Driven Movie Review Data Integration",
                     description:
                         "Automated Google Sheets solution integrating NYT and TMDB APIs with enriched movie metadata.",
@@ -110,7 +116,9 @@ class PortfolioChatbot {
                 aiInternshipVideo:
                     "https://drive.google.com/file/d/1wREhl5bwdIhyAe9YNH_raxSR_TjTE8DH/view",
                 sneakyFindsVideo:
-                    "https://drive.google.com/file/d/1s5HLSSVDFTEj6Ib326v7aZQLlWelokQn/view",
+                    "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/view",
+                wowFoodsVideo:
+                    "https://drive.google.com/file/d/1nOEnzlV6nO4YGDRbaEWepFrDieuTjUdz/view",
                 googleSheetsAssignment:
                     "https://docs.google.com/spreadsheets/d/1hD698_710CCJ_qr7qVtsz3MDTm8CxAvz9PSM6CffqVs/edit"
             },
@@ -239,6 +247,7 @@ class PortfolioChatbot {
         // Videos / Assignments
         if (input.includes("ai") || input.includes("internship")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
         if (input.includes("sneaky")) return `SneakyFinds Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
+        if (input.includes("wow") || input.includes("food")) return `Wow Foods Demo Video: ${this.portfolioData.resources.wowFoodsVideo}`;
         if (input.includes("google") || input.includes("assignment")) return `Google Sheets Assignment: ${this.portfolioData.resources.googleSheetsAssignment}`;
 
         // Industry involvement
