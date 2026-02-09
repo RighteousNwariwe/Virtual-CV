@@ -6,12 +6,12 @@ class PortfolioChatbot {
 
         this.portfolioData = {
             name: "Righteous Onyedi Nhlanhla Mpila Nwariwe",
-            title: "Data Analyst | Full-Stack Developer | AI & Data Enthusiast",
+            title: "Data Analyst | Web Developer | Passion for AI & Data",
             profileSummary:
-                "An ambitious tech enthusiast with strong programming skills in C#, Java, Python, JavaScript, SQL, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
+                "An ambitious tech enthusiast with strong programming skills in SQL, Python, JavaScript, HTML, CSS, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
             skills: {
                 technical: [
-                    "Python", "C#", "HTML/CSS", "JavaScript", "Java", "SQL", "C++", "PowerBI"
+                    "Python", "HTML/CSS", "JavaScript", "SQL", "PowerBI"
                 ],
                 software: [
                     "Web Application Development",
