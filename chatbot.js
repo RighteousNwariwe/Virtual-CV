@@ -11,9 +11,7 @@ class PortfolioChatbot {
                 "An ambitious tech enthusiast with strong programming skills in C#, Java, Python, JavaScript, SQL, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
             skills: {
                 technical: [
-                    "Python", "C#", "HTML", "CSS", "JavaScript", "Java", "C++",
-                    "SQL", "MongoDB", "Oracle", "MySQL", "Power BI",
-                    "Google Sheets", "Excel", "Firebase"
+                    "Python", "C#", "HTML/CSS", "JavaScript", "Java", "SQL", "C++", "PowerBI"
                 ],
                 software: [
                     "Web Application Development",
@@ -40,6 +38,10 @@ class PortfolioChatbot {
                 "Diploma in Quantum Computing & Programming – QSouthAfrica (July 2023)",
                 "FNB App Academy 2025 – Certificate in Full Stack Development (24 July 2025)",
                 "Introduction to SQL(Certificate) – Sololearn (07 January, 2026)"
+            ],
+            academicDocuments: [
+                "Final Academic Transcript – BSc in Information Technology, North-West University",
+                "Completion Letter – North-West University Program Completion Confirmation"
             ],
             experience: [
                 {
@@ -171,7 +173,7 @@ class PortfolioChatbot {
     addWelcomeMessage() {
         this.addMessage(
             'bot',
-            "Hello! I’m Righteous’s portfolio assistant. Ask me about skills, projects, certifications, experience, assignments, videos, or contact info."
+            "Hello! I'm Righteous's portfolio assistant. Ask me about skills, projects, certifications, experience, academic documents, assignments, videos, or contact info."
         );
     }
 
@@ -209,7 +211,7 @@ class PortfolioChatbot {
 
         // Greetings
         if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
-            return `Hi! I'm your assistant for Righteous's portfolio. You can ask about skills, experience, projects, certifications, assignments, or demo videos.`;
+            return `Hi! I'm your assistant for Righteous's portfolio. You can ask about skills, experience, projects, certifications, academic documents, assignments, or demo videos.`;
         }
 
         // Skills
@@ -244,6 +246,11 @@ class PortfolioChatbot {
             return this.portfolioData.certifications.join("<br>");
         }
 
+        // Academic Documents
+        if (input.includes("transcript") || input.includes("academic") || input.includes("completion")) {
+            return this.portfolioData.academicDocuments.join("<br>");
+        }
+
         // Videos / Assignments
         if (input.includes("ai") || input.includes("internship")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
         if (input.includes("sneaky")) return `SneakyFinds Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
@@ -263,10 +270,10 @@ class PortfolioChatbot {
 
         // Default response
         const responses = [
-            "I can help you with Righteous's skills, experience, projects, certifications, assignments, or contact info.",
-            "Ask me about his technical or professional skills, projects, or videos.",
-            "You can ask about experience, education, industry involvement, or demo resources.",
-            "I'm here to guide you through Righteous's portfolio. Try asking about skills, projects, or contact info."
+            "I can help you with Righteous's skills, experience, projects, certifications, academic documents, assignments, or contact info.",
+            "Ask me about his technical or professional skills, projects, academic documents, or videos.",
+            "You can ask about experience, education, certifications, academic documents, industry involvement, or demo resources.",
+            "I'm here to guide you through Righteous's portfolio. Try asking about skills, projects, academic documents, or contact info."
         ];
         return responses[Math.floor(Math.random() * responses.length)];
     }

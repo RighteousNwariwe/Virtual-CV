@@ -519,52 +519,198 @@ body, html {
 }
 
 .skills-section {
-  background: rgba(20, 24, 40, 0.55) !important;
-  border-radius: 1rem;
-  margin: 2rem 0;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
-  max-width: 900px;
-  padding: 2rem 2rem 2.5rem 2rem;
+  background: linear-gradient(135deg, rgba(20, 24, 40, 0.95) 0%, rgba(30, 36, 56, 0.95) 100%) !important;
+  border-radius: 1.5rem;
+  margin: 3rem auto;
+  border: 1px solid rgba(110, 193, 228, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(110, 193, 228, 0.1);
+  max-width: 1000px;
+  padding: 3rem 2.5rem 3.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
 }
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0000 0%, #6ec1e4 50%, #00ff6a 100%);
+}
+
+.skills-section h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0000, #6ec1e4);
+  border-radius: 2px;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 3rem;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
+
 .skills-group {
-  min-width: 250px;
-  flex: 1 1 300px;
-}
-.skills-group h3 {
-  color: #6ec1e4;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  text-align: left;
-}
-.skill {
-  margin-bottom: 1.1rem;
-}
-.skill span {
-  display: inline-block;
-  min-width: 120px;
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-}
-.progress {
-  background: #222b3a;
-  border-radius: 1rem;
-  height: 14px;
-  width: 100%;
-  margin-top: 0.2rem;
+  min-width: 280px;
+  flex: 1 1 350px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   overflow: hidden;
 }
+
+.skills-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff0000, #6ec1e4);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.skills-group:hover::before {
+  transform: scaleX(1);
+}
+
+.skills-group:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(110, 193, 228, 0.2);
+  border-color: rgba(110, 193, 228, 0.3);
+}
+
+.skills-group h3 {
+  color: #6ec1e4;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(110, 193, 228, 0.2);
+}
+
+.skills-group h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff0000, #6ec1e4);
+}
+
+.skill {
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.skill:last-child {
+  margin-bottom: 0;
+}
+
+.skill span {
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.skill span::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #ff0000;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.skill:hover span::before {
+  transform: translateX(3px);
+}
+
+.progress {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  height: 12px;
+  width: 100%;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: progressShimmer 2s infinite;
+}
+
+@keyframes progressShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 .bar {
   height: 100%;
   border-radius: 1rem;
   background: linear-gradient(90deg, #ff0000 0%, #6ec1e4 100%);
-  transition: width 1s cubic-bezier(.4,2,.3,1);
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+  border-radius: 0 1rem 1rem 0;
+  animation: progressGlow 2s ease-in-out infinite;
+}
+
+@keyframes progressGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
 }
 
 @media (max-width: 900px) {
