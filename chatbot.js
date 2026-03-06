@@ -6,7 +6,7 @@ class PortfolioChatbot {
 
         this.portfolioData = {
             name: "Righteous Onyedi Nhlanhla Mpila Nwariwe",
-            title: "Data Analyst | Web Developer | Passion for AI & Data",
+            title: "Software Developer | Data Analyst | Power BI & SQL | Web Developer | Passion for AI & Cybersecurity",
             profileSummary:
                 "An ambitious tech enthusiast with strong programming skills in SQL, Python, JavaScript, HTML, CSS, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
             skills: {
@@ -85,28 +85,34 @@ class PortfolioChatbot {
             ],
             projects: [
                 {
-                    name: "ClearVue Sales Report System",
+                    name: "SneakyFinds - Online Thrift Store",
                     description:
-                        "Sales reporting system with MongoDB backend and Power BI analytics dashboard.",
-                    tech: "Node.js, MongoDB, Power BI, JavaScript"
-                },
-                {
-                    name: "SneakyFinds Online Thrift Store",
-                    description:
-                        "E-commerce thrift platform with authentication, cart, checkout, and admin modules.",
+                        "A complete online thrift store promoting sustainable shopping with secure authentication, cart management, and admin controls.",
                     tech: "HTML, CSS, JavaScript, Firebase"
                 },
                 {
-                    name: "Wow Foods - E-commerce Website",
+                    name: "AI Automation Internship Assignment",
                     description:
-                        "Modern e-commerce platform for food ordering and delivery with payment integration and real-time tracking.",
-                    tech: "E-commerce Platform | Web Development | Food Delivery"
+                        "AI-driven automation assignment focusing on intelligent task automation, process efficiency, and practical AI integration for real-world business workflows.",
+                    tech: "AI Automation, JavaScript, Workflow Optimization"
                 },
                 {
-                    name: "API-Driven Movie Review Data Integration",
+                    name: "ClearVue Sales Report System",
                     description:
-                        "Automated Google Sheets solution integrating NYT and TMDB APIs with enriched movie metadata.",
-                    tech: "Google Apps Script, NYT API, TMDB API"
+                        "Sales reporting system with MongoDB backend and Power BI analytics dashboard for ClearVue Ltd.",
+                    tech: "Node.js, MongoDB, Power BI, JavaScript"
+                },
+                {
+                    name: "Driving School Management System",
+                    description:
+                        "Comprehensive driving school management system handling student registrations, lesson scheduling, instructor assignments, and progress tracking.",
+                    tech: "Web Application, Student Management, Scheduling System"
+                },
+                {
+                    name: "Internship and Job Placement Hub",
+                    description:
+                        "Comprehensive internship and job placement platform connecting students with potential employers, featuring job postings and application tracking.",
+                    tech: "School Project, Job Portal, Student-Employer Connection"
                 }
             ],
             industryInvolvement: [
@@ -116,11 +122,15 @@ class PortfolioChatbot {
             ],
             resources: {
                 aiInternshipVideo:
-                    "https://drive.google.com/file/d/1wREhl5bwdIhyAe9YNH_raxSR_TjTE8DH/view",
+                    "https://drive.google.com/file/d/1wREhl5bwdIhyAe9YNH_raxSR_TjTE8DH/preview",
                 sneakyFindsVideo:
-                    "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/view",
-                wowFoodsVideo:
-                    "https://drive.google.com/file/d/1nOEnzlV6nO4YGDRbaEWepFrDieuTjUdz/view",
+                    "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/preview",
+                drivingSchoolVideo:
+                    "https://drive.google.com/file/d/1a4yMDXC3A-zfNsV62VH_CK5eSwj9b77S/preview",
+                internshipPlacementVideo:
+                    "https://drive.google.com/file/d/1JN4yuV-NwyPFu4Pm1aRQAvfvYPzkXr9B/preview",
+                clearVueVideo:
+                    "https://drive.google.com/file/d/1_0gVvQ1qMjvQTIfRuAoT2LmrE-AdxLiM/preview",
                 googleSheetsAssignment:
                     "https://docs.google.com/spreadsheets/d/1hD698_710CCJ_qr7qVtsz3MDTm8CxAvz9PSM6CffqVs/edit"
             },
@@ -254,7 +264,9 @@ class PortfolioChatbot {
         // Videos / Assignments
         if (input.includes("ai") || input.includes("internship")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
         if (input.includes("sneaky")) return `SneakyFinds Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
-        if (input.includes("wow") || input.includes("food")) return `Wow Foods Demo Video: ${this.portfolioData.resources.wowFoodsVideo}`;
+        if (input.includes("driving")) return `Driving School Demo Video: ${this.portfolioData.resources.drivingSchoolVideo}`;
+        if (input.includes("internship placement") || input.includes("job placement")) return `Internship and Job Placement Hub Video: ${this.portfolioData.resources.internshipPlacementVideo}`;
+        if (input.includes("clearvue")) return `ClearVue Sales Report Demo: ${this.portfolioData.resources.clearVueVideo}`;
         if (input.includes("google") || input.includes("assignment")) return `Google Sheets Assignment: ${this.portfolioData.resources.googleSheetsAssignment}`;
 
         // Industry involvement
