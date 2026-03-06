@@ -6,28 +6,15 @@ class PortfolioChatbot {
 
         this.portfolioData = {
             name: "Righteous Onyedi Nhlanhla Mpila Nwariwe",
-            title: "Data Analyst | Web Developer | Passion for AI & Data",
+            title: "Software Developer | Data Analyst | Power BI & SQL | Web Developer | Passion for AI & Cybersecurity",
             profileSummary:
-                "An ambitious tech enthusiast with strong programming skills in SQL, Python, JavaScript, HTML, CSS, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
+                "An ambitious Software Developer | Data Analyst | Power BI & SQL | Web Developer with strong programming skills in C#, HTML, CSS, Java, SQL, C++, Python, and JavaScript. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
             skills: {
-                technical: [
-                    "Python", "HTML/CSS", "JavaScript", "SQL", "PowerBI"
-                ],
-                software: [
-                    "Web Application Development",
-                    "Full-Stack Development",
-                    "UI/UX Design",
-                    "Database Management",
-                    "API Integration"
-                ],
-                professional: [
-                    "Communication",
-                    "Leadership",
-                    "Teamwork",
-                    "Adaptability",
-                    "Problem Solving",
-                    "Ability to Work Under Pressure"
-                ]
+                technical: {
+                    "Languages & Frameworks": ["Python", "C#", "HTML/CSS", "JavaScript", "React.js", "Node.js", "Java", "SQL"],
+                    "Database & DevOps": ["MySQL", "MongoDB", "PowerBI", "Excel", "Git", "Oracle", "Firebase"]
+                },
+                professional: ["Communication", "Leadership", "Teamwork", "Adaptability", "Problem-Solving", "Analytical & Critical Thinking", "AI Literacy", "Work Under Pressure"]
             },
             education: {
                 institution: "North-West University, Vanderbijlpark",
@@ -85,28 +72,34 @@ class PortfolioChatbot {
             ],
             projects: [
                 {
+                    name: "AI Automation Internship Assignment",
+                    description:
+                        "AI-driven automation assignment completed during an internship application, focusing on intelligent task automation, process efficiency, and practical AI integration for real-world business workflows.",
+                    tech: "AI Automation | JavaScript | Workflow Optimization"
+                },
+                {
                     name: "ClearVue Sales Report System",
                     description:
-                        "Sales reporting system with MongoDB backend and Power BI analytics dashboard.",
-                    tech: "Node.js, MongoDB, Power BI, JavaScript"
+                        "Modern sales reporting system for ClearVue Ltd with MongoDB backend and Power BI analytics dashboard.",
+                    tech: "Full-Stack Application | MongoDB | PowerBI | JavaScript"
                 },
                 {
                     name: "SneakyFinds Online Thrift Store",
                     description:
-                        "E-commerce thrift platform with authentication, cart, checkout, and admin modules.",
-                    tech: "HTML, CSS, JavaScript, Firebase"
+                        "E-commerce thrift platform with authentication, cart management, and admin controls. Tagline: 'Good Prices, Great Steals!'",
+                    tech: "E-commerce Website | HTML/CSS/JavaScript"
                 },
                 {
-                    name: "Wow Foods - E-commerce Website",
+                    name: "Lords Driving School",
                     description:
-                        "Modern e-commerce platform for food ordering and delivery with payment integration and real-time tracking.",
-                    tech: "E-commerce Platform | Web Development | Food Delivery"
+                        "Comprehensive driving school program offering driving lessons in a safe and supportive environment. Mission is to produce confident and competent drivers.",
+                    tech: "Driving School Management | Web Application | Educational Platform"
                 },
                 {
-                    name: "API-Driven Movie Review Data Integration",
+                    name: "Internship and Job Placement Hub",
                     description:
-                        "Automated Google Sheets solution integrating NYT and TMDB APIs with enriched movie metadata.",
-                    tech: "Google Apps Script, NYT API, TMDB API"
+                        "Educational platform connecting students with internship and job placement opportunities. Serves as centralized hub for career development.",
+                    tech: "Educational Platform | Student Services | Web Application"
                 }
             ],
             industryInvolvement: [
@@ -117,10 +110,14 @@ class PortfolioChatbot {
             resources: {
                 aiInternshipVideo:
                     "https://drive.google.com/file/d/1wREhl5bwdIhyAe9YNH_raxSR_TjTE8DH/view",
+                clearVueVideo:
+                    "https://drive.google.com/file/d/1_0gVvQ1qMjvQTIfRuAoT2LmrE-AdxLiM/view",
                 sneakyFindsVideo:
-                    "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/view",
-                wowFoodsVideo:
-                    "https://drive.google.com/file/d/1nOEnzlV6nO4YGDRbaEWepFrDieuTjUdz/view",
+                    "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/view?usp=sharing",
+                lordsDrivingSchoolVideo:
+                    "https://drive.google.com/file/d/1a4yMDXC3A-zfNsV62VH_CK5eSwj9b77S/view?usp=sharing",
+                internshipHubVideo:
+                    "https://drive.google.com/file/d/1JN4yuV-NwyPFu4Pm1aRQAvfvYPzkXr9B/view?usp=sharing",
                 googleSheetsAssignment:
                     "https://docs.google.com/spreadsheets/d/1hD698_710CCJ_qr7qVtsz3MDTm8CxAvz9PSM6CffqVs/edit"
             },
@@ -216,9 +213,15 @@ class PortfolioChatbot {
 
         // Skills
         if (input.includes("skill") || input.includes("programming") || input.includes("technology")) {
-            return `Righteous's technical skills: ${this.portfolioData.skills.technical.join(", ")}.<br>
-            Professional skills: ${this.portfolioData.skills.professional.join(", ")}.<br>
-            Software & tools: ${this.portfolioData.skills.software.join(", ")}.`;
+            const techSkills = this.portfolioData.skills.technical;
+            let response = "Righteous's technical skills are organized by category:<br><br>";
+
+            for (const [category, skills] of Object.entries(techSkills)) {
+                response += `<b>${category}:</b> ${skills.join(", ")}<br><br>`;
+            }
+
+            response += `<br><b>Professional Skills:</b> ${this.portfolioData.skills.professional.join(", ")}`;
+            return response;
         }
 
         // Education
@@ -229,7 +232,7 @@ class PortfolioChatbot {
 
         // Experience
         if (input.includes("experience") || input.includes("work") || input.includes("job")) {
-            return this.portfolioData.experience.map(exp => 
+            return this.portfolioData.experience.map(exp =>
                 `<b>${exp.title}</b> (${exp.period}): ${exp.details.join(", ")}`
             ).join("<br><br>");
         }
@@ -253,8 +256,10 @@ class PortfolioChatbot {
 
         // Videos / Assignments
         if (input.includes("ai") || input.includes("internship")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
+        if (input.includes("clearvue")) return `ClearVue Sales Report Video: ${this.portfolioData.resources.clearVueVideo}`;
         if (input.includes("sneaky")) return `SneakyFinds Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
-        if (input.includes("wow") || input.includes("food")) return `Wow Foods Demo Video: ${this.portfolioData.resources.wowFoodsVideo}`;
+        if (input.includes("driving") || input.includes("lords")) return `Lords Driving School Video: ${this.portfolioData.resources.lordsDrivingSchoolVideo}`;
+        if (input.includes("placement") || input.includes("internship hub")) return `Internship and Job Placement Hub Video: ${this.portfolioData.resources.internshipHubVideo}`;
         if (input.includes("google") || input.includes("assignment")) return `Google Sheets Assignment: ${this.portfolioData.resources.googleSheetsAssignment}`;
 
         // Industry involvement
