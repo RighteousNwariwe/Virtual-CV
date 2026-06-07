@@ -6,19 +6,23 @@ class PortfolioChatbot {
 
         this.portfolioData = {
             name: "Righteous Onyedi Nhlanhla Mpila Nwariwe",
-            title: "Software Developer | Data Analyst | Power BI & SQL | Web Developer | Passion for AI & Cybersecurity",
+            title: "Full-Stack Developer | Data Scientist | Data Analyst",
             profileSummary:
-                "An ambitious tech enthusiast with strong programming skills in SQL, Python, JavaScript, HTML, CSS, and web technologies. Experienced in full-stack development, API integration, and data analytics, with active participation in industry events and leadership roles.",
+                "A full-stack developer and data professional with a BSc in IT. Experienced in React/Firebase e-commerce, Power BI dashboards, Python/Pandas ETL pipelines, and Apache Kafka real-time analytics.",
             skills: {
                 technical: [
-                    "Python", "HTML/CSS", "JavaScript", "SQL", "PowerBI"
+                    "Python", "JavaScript", "React.js", "HTML/CSS", "SQL", "Tailwind CSS", "Firebase"
+                ],
+                data: [
+                    "Power BI", "Excel", "Pandas", "ETL Pipelines", "Apache Kafka", "Google Apps Script", "Statistical Analysis"
                 ],
                 software: [
-                    "Web Application Development",
                     "Full-Stack Development",
-                    "UI/UX Design",
                     "Database Management",
-                    "API Integration"
+                    "REST API Integration",
+                    "Business Intelligence",
+                    "Firebase Hosting",
+                    "Vite"
                 ],
                 professional: [
                     "Communication",
@@ -39,11 +43,45 @@ class PortfolioChatbot {
                 "FNB App Academy 2025 – Certificate in Full Stack Development (24 July 2025)",
                 "Introduction to SQL(Certificate) – Sololearn (07 January, 2026)"
             ],
+            cvs: [
+                "Full-Stack Developer – Full Stack Developer CV(Righteous Nwaiwe).pdf",
+                "Data Scientist – Data Scientist CV(Righteous Nwariwe).pdf",
+                "Data Analyst – Data Analyst CV(Righteous Nwariwe).pdf"
+            ],
             academicDocuments: [
                 "Final Academic Transcript – BSc in Information Technology, North-West University",
                 "Completion Letter – North-West University Program Completion Confirmation"
             ],
             experience: [
+                {
+                    title: "Full Stack Developer – SneakyFinds Pty Ltd",
+                    period: "January 2025 – December 2025",
+                    details: [
+                        "Built production React/Firebase e-commerce platform",
+                        "Managed real-time inventory and order data",
+                        "Implemented SEO and admin dashboards",
+                        "Delivered business insights from customer data"
+                    ]
+                },
+                {
+                    title: "Data Analytics & Engineering – ClearVue BI System",
+                    period: "July 2025 – November 2025",
+                    details: [
+                        "Designed Power BI KPI dashboards",
+                        "Built Python/Pandas ETL workflows",
+                        "Integrated MongoDB, SQL, and Apache Kafka",
+                        "Optimised data modelling and reporting accuracy"
+                    ]
+                },
+                {
+                    title: "Freelance Web Developer",
+                    period: "January 2024 – Present",
+                    details: [
+                        "Developed responsive e-commerce apps for businesses",
+                        "Integrated Firebase auth and real-time databases",
+                        "Deployed production apps via Firebase Hosting"
+                    ]
+                },
                 {
                     title: "Recruitment Officer – Geekulcha (NWU Vaal Campus)",
                     period: "March 2024 – November 2024",
@@ -53,69 +91,55 @@ class PortfolioChatbot {
                         "Facilitated HTML/CSS training",
                         "Managed solo and team-based projects"
                     ]
-                },
-                {
-                    title: "Treasurer – Faculty of Natural and Agricultural Sciences (NWU)",
-                    period: "2024 – 2025",
-                    details: [
-                        "Managed faculty budgets and financial records",
-                        "Prepared financial reports",
-                        "Ensured transparency and accountability"
-                    ]
-                },
-                {
-                    title: "Class Representative – MTHS 225",
-                    period: "2024",
-                    details: [
-                        "Liaison between students and lecturers",
-                        "Organised study sessions",
-                        "Resolved academic concerns"
-                    ]
-                },
-                {
-                    title: "Web Developer & Data Handler – SneakyFinds (Self-Employed)",
-                    period: "Jan 2025 – Dec 2025",
-                    details: [
-                        "Developed full-stack platform using Firebase",
-                        "Designed UI/UX",
-                        "Managed database and backend logic",
-                        "Conducted business and market analysis"
-                    ]
                 }
             ],
             projects: [
                 {
-                    name: "SneakyFinds - Online Thrift Store",
+                    name: "SneakyFinds – Online Thrift Store",
                     description:
-                        "A complete online thrift store promoting sustainable shopping with secure authentication, cart management, and admin controls.",
-                    tech: "HTML, CSS, JavaScript, Firebase"
+                        "Production-ready thrift e-commerce with single-item inventory, real-time sync, bank transfers, and WhatsApp/email notifications.",
+                    tech: "React.js, Firebase, EmailJS",
+                    links: { live: "https://sneakyfinds.co.za/", github: "https://github.com/RighteousNwariwe/SneakyFinds" }
                 },
                 {
-                    name: "AI Automation Internship Assignment",
+                    name: "Wow Foods – E-Commerce Platform",
                     description:
-                        "AI-driven automation assignment focusing on intelligent task automation, process efficiency, and practical AI integration for real-world business workflows.",
-                    tech: "AI Automation, JavaScript, Workflow Optimization"
+                        "Full-featured fast-food e-commerce with authentication, real-time orders, payments, and admin dashboard for Cape Town restaurant.",
+                    tech: "React 18, Firebase, Vite",
+                    links: { live: "https://wow-foods-5edc4.web.app/", github: "https://github.com/RighteousNwariwe/Wow-Foods" }
+                },
+                {
+                    name: "Lord's Driving School",
+                    description:
+                        "Full-stack driving school app with lesson scheduling, Firebase backend, and Tailwind CSS responsive UI.",
+                    tech: "React.js, Tailwind CSS, Firebase",
+                    links: { live: "https://lords-driving-school.web.app/" }
+                },
+                {
+                    name: "Internship & Job Placement Hub",
+                    description:
+                        "Responsive job portal connecting students and employers with role-based auth, job filtering, and application tracking.",
+                    tech: "HTML, CSS, SCSS, JavaScript, Bootstrap 4",
+                    links: { github: "https://github.com/RighteousNwariwe/Intern-Job-Portal" }
                 },
                 {
                     name: "ClearVue Sales Report System",
                     description:
-                        "Sales reporting system with MongoDB backend and Power BI analytics dashboard for ClearVue Ltd.",
-                    tech: "Node.js, MongoDB, Power BI, JavaScript"
+                        "Sales reporting and BI system with MongoDB, Kafka, Python ETL, and Power BI dashboards.",
+                    tech: "MongoDB, Power BI, Python, Apache Kafka",
+                    links: { github: "https://github.com/RighteousNwariwe/ClearVue-Sales-Report" }
                 },
                 {
-                    name: "Driving School Management System",
+                    name: "AI Automation Internship Assignment",
                     description:
-                        "Comprehensive driving school management system handling student registrations, lesson scheduling, instructor assignments, and progress tracking.",
-                    tech: "Web Application, Student Management, Scheduling System"
-                },
-                {
-                    name: "Internship and Job Placement Hub",
-                    description:
-                        "Comprehensive internship and job placement platform connecting students with potential employers, featuring job postings and application tracking.",
-                    tech: "School Project, Job Portal, Student-Employer Connection"
+                        "AI-driven automation assignment focusing on intelligent task automation and business workflow optimisation.",
+                    tech: "AI Automation, JavaScript, Workflow Optimization"
                 }
             ],
             industryInvolvement: [
+                "Basketball Team Member",
+                "Chess Club Participant",
+                "Hacking & Cybersecurity Enthusiast",
                 "Geekulcha Hackathon Participant (2023)",
                 "GEEXPO Judge – NWU VAAL (2024)",
                 "IT WEB Security Summit Participant (2024)"
@@ -142,7 +166,7 @@ class PortfolioChatbot {
                 portfolio: "https://righteousnwariwe.github.io/Virtual-Portfolio/"
             },
             location: "Johannesburg, South Africa",
-            interests: ["Cybersecurity", "Full-Stack Development", "Programming", "Technology Trends"]
+            interests: ["Full-Stack Development", "Data Science", "Data Analytics", "Business Intelligence"]
         };
 
         this.initializeElements();
@@ -227,8 +251,15 @@ class PortfolioChatbot {
         // Skills
         if (input.includes("skill") || input.includes("programming") || input.includes("technology")) {
             return `Righteous's technical skills: ${this.portfolioData.skills.technical.join(", ")}.<br>
+            Data & analytics: ${this.portfolioData.skills.data.join(", ")}.<br>
             Professional skills: ${this.portfolioData.skills.professional.join(", ")}.<br>
             Software & tools: ${this.portfolioData.skills.software.join(", ")}.`;
+        }
+
+        // CV downloads
+        if (input.includes("cv") || input.includes("resume") || input.includes("curriculum")) {
+            return `Righteous offers three tailored CVs. Scroll to the Download CV section and choose:<br>
+            ${this.portfolioData.cvs.join("<br>")}`;
         }
 
         // Education
@@ -247,7 +278,14 @@ class PortfolioChatbot {
         // Projects
         if (input.includes("project") || input.includes("github") || input.includes("code")) {
             return this.portfolioData.projects
-                .map(p => `<b>${p.name}</b>: ${p.description} [Tech: ${p.tech}]`)
+                .map(p => {
+                    let links = "";
+                    if (p.links) {
+                        if (p.links.live) links += `<br>Live: ${p.links.live}`;
+                        if (p.links.github) links += `<br>GitHub: ${p.links.github}`;
+                    }
+                    return `<b>${p.name}</b>: ${p.description} [Tech: ${p.tech}]${links}`;
+                })
                 .join("<br><br>");
         }
 
@@ -262,10 +300,11 @@ class PortfolioChatbot {
         }
 
         // Videos / Assignments
-        if (input.includes("ai") || input.includes("internship")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
-        if (input.includes("sneaky")) return `SneakyFinds Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
-        if (input.includes("driving")) return `Driving School Demo Video: ${this.portfolioData.resources.drivingSchoolVideo}`;
-        if (input.includes("internship placement") || input.includes("job placement")) return `Internship and Job Placement Hub Video: ${this.portfolioData.resources.internshipPlacementVideo}`;
+        if (input.includes("ai") || input.includes("internship assignment")) return `AI Internship Video: ${this.portfolioData.resources.aiInternshipVideo}`;
+        if (input.includes("wow") || input.includes("food")) return `Wow Foods Live Demo: https://wow-foods-5edc4.web.app/<br>GitHub: https://github.com/RighteousNwariwe/Wow-Foods`;
+        if (input.includes("sneaky")) return `SneakyFinds Live: https://sneakyfinds.co.za/<br>Demo Video: ${this.portfolioData.resources.sneakyFindsVideo}`;
+        if (input.includes("driving") || input.includes("lord")) return `Lord's Driving School Live Demo: https://lords-driving-school.web.app/<br>Demo Video: ${this.portfolioData.resources.drivingSchoolVideo}`;
+        if (input.includes("internship placement") || input.includes("job placement") || input.includes("job portal")) return `Intern-Job-Portal GitHub: https://github.com/RighteousNwariwe/Intern-Job-Portal<br>Demo Video: ${this.portfolioData.resources.internshipPlacementVideo}`;
         if (input.includes("clearvue")) return `ClearVue Sales Report Demo: ${this.portfolioData.resources.clearVueVideo}`;
         if (input.includes("google") || input.includes("assignment")) return `Google Sheets Assignment: ${this.portfolioData.resources.googleSheetsAssignment}`;
 

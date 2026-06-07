@@ -347,6 +347,67 @@ html {
   margin-bottom: 1.5rem;
 }
 
+.cv-intro {
+  text-align: center;
+  color: #cfd8dc;
+  margin-bottom: 2rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cv-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cv-option-card {
+  background: rgba(10, 14, 24, 0.75);
+  border: 1px solid rgba(110, 193, 228, 0.25);
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-option-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 106, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 255, 106, 0.12);
+}
+
+.cv-option-card i {
+  font-size: 2rem;
+  color: #00ff6a;
+}
+
+.cv-option-card h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.cv-option-card p {
+  color: #b0bec5;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.cv-option-card .custom-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 200px;
+}
+
 .cv-btn {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -2327,6 +2388,13 @@ body::before {
 .project-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(255, 0, 64, 0.3);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 /* View all projects CTA */
