@@ -25,7 +25,7 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(
-        'service_default',
+        'service_virtualportfolio',
         'template_k8gwix9',
         {
           from_name: formData.name,

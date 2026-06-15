@@ -6,7 +6,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 import Chatbot from "@/components/chatbot"
 import ContactForm from "@/components/contact-form"
 import { motion } from "framer-motion"
-import { Linkedin, Github, Mail, Phone, Menu, X } from "lucide-react"
+import { Linkedin, Github, Mail, Phone, Menu, X, Download } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'experience', 'education', 'projects', 'contact']
+      const sections = ['home', 'about', 'skills', 'experience', 'education', 'certificates', 'projects', 'contact']
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
@@ -49,7 +49,7 @@ export default function Home() {
             <span className="text-xl font-bold text-green-400">RN</span>
             
             <div className="hidden md:flex items-center space-x-8">
-              {['Home', 'About', 'Skills', 'Experience', 'Education', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About', 'Skills', 'Experience', 'Education', 'Certificates', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -78,7 +78,7 @@ export default function Home() {
             className="md:hidden bg-black/95 border-b border-white/10"
           >
             <div className="px-4 py-4 space-y-2">
-              {['Home', 'About', 'Skills', 'Experience', 'Education', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About', 'Skills', 'Experience', 'Education', 'Certificates', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -105,14 +105,26 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+                className="flex flex-col items-center text-center"
               >
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20">
+                  <img 
+                    src="/grad-pic.jpeg" 
+                    alt="Graduation Picture" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.parentElement!.innerHTML = '<span class="text-4xl">🎓</span>'
+                    }}
+                  />
+                </div>
                 <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400 mb-4">
                   Righteous Nwariwe
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-6">
                   Full-Stack Developer | Data Scientist | Data Analyst
                 </p>
-                <div className="flex gap-4 mb-8">
+                <div className="flex gap-4 mb-8 justify-center">
                   <a
                     href="https://www.linkedin.com/in/righteous-nwariwe-01023727a"
                     target="_blank"
@@ -136,6 +148,16 @@ export default function Home() {
                     <Mail size={24} />
                   </a>
                 </div>
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  onClick={() => window.open('/Full Stack Developer CV(Righteous Nwaiwe).pdf', '_blank')}
+                  className="flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-bold rounded-full hover:bg-green-400 transition-colors mx-auto"
+                >
+                  <Download size={20} />
+                  Download CV
+                </motion.button>
               </motion.div>
             </div>
             
@@ -345,22 +367,26 @@ export default function Home() {
               {
                 title: "BSc in Information Technology",
                 institution: "North-West University, Vanderbijlpark",
-                period: "Feb 2023 - 2025"
+                period: "Feb 2023 - 2025",
+                certificate: "/Final year AcademicRecord_43511139                      .pdf"
               },
               {
                 title: "Diploma in Quantum Computing & Programming",
                 institution: "QSouthAfrica",
-                period: "July 2023"
+                period: "July 2023",
+                certificate: "/QBronze109-139.pdf"
               },
               {
                 title: "FNB App Academy 2025 - Full Stack Development Certificate",
                 institution: "FNB",
-                period: "24 July 2025"
+                period: "24 July 2025",
+                certificate: "/Righteous FNB App academy certificate.pdf"
               },
               {
                 title: "Introduction to SQL Certificate",
                 institution: "Sololearn",
-                period: "07 January, 2026"
+                period: "07 January, 2026",
+                certificate: "/Introduction to SQL(Certificate).pdf"
               }
             ].map((edu, index) => (
               <motion.div
@@ -371,10 +397,79 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
               >
-                <h3 className="text-xl font-bold text-green-400">{edu.title}</h3>
-                <p className="text-gray-400">{edu.institution}</p>
-                <p className="text-sm text-gray-500">{edu.period}</p>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl font-bold text-green-400">{edu.title}</h3>
+                    <p className="text-gray-400">{edu.institution}</p>
+                    <p className="text-sm text-gray-500">{edu.period}</p>
+                  </div>
+                  {edu.certificate && (
+                    <a
+                      href={edu.certificate}
+                      target="_blank"
+                      rel="noopener"
+                      className="px-4 py-2 bg-green-500/20 text-green-400 rounded-lg hover:bg-green-500 hover:text-black transition-colors text-sm font-medium"
+                    >
+                      View Certificate
+                    </a>
+                  )}
+                </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" className="min-h-screen flex items-center justify-center py-20 px-4">
+        <div className="max-w-6xl mx-auto w-full">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500"
+          >
+            Additional Documents
+          </motion.h2>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Data Analyst CV",
+                description: "Curriculum Vitae focused on data analysis roles",
+                link: "/Data Analyst CV(Righteous Nwariwe).pdf"
+              },
+              {
+                title: "Data Scientist CV",
+                description: "Curriculum Vitae focused on data science roles",
+                link: "/Data Scientist CV(Righteous Nwariwe).pdf"
+              },
+              {
+                title: "Completion Letter",
+                description: "Academic completion letter from university",
+                link: "/Completion letter 43511139_Nwariwe_Rightous Onyedi Nhlanhla Mpila_CompletionLetter.pdf"
+              }
+            ].map((doc, index) => (
+              <motion.a
+                key={index}
+                href={doc.link}
+                target="_blank"
+                rel="noopener"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/50 transition-colors group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-green-500/20 rounded-full group-hover:bg-green-500 group-hover:text-black transition-colors">
+                    <Download size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-green-400 mb-1">{doc.title}</h3>
+                    <p className="text-gray-400 text-sm">{doc.description}</p>
+                  </div>
+                </div>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -463,6 +558,8 @@ export default function Home() {
                       allow="autoplay"
                       allowFullScreen
                       className="border-0"
+                      style={{ border: 'none' }}
+                      loading="lazy"
                     />
                   </div>
                 )}
@@ -580,7 +677,10 @@ export default function Home() {
       </section>
 
       <footer className="py-8 border-t border-white/10 text-center text-gray-400">
-        <p>© 2025 Righteous Nwariwe. All rights reserved.</p>
+        <p className="mb-2">© 2025 Righteous Nwariwe. All rights reserved.</p>
+        <a href="mailto:righteousonyedi@gmail.com" className="text-green-400 hover:text-green-300 transition-colors">
+          righteousonyedi@gmail.com
+        </a>
       </footer>
     </div>
     <Chatbot />
