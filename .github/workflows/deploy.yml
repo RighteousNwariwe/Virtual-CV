@@ -1,0 +1,46 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [My-VP-Main-branch]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'new-portfolio/package-lock.json'
+      
+      - name: Install dependencies
+        working-directory: new-portfolio
+        run: npm ci
+      
+      - name: Build Next.js
+        working-directory: new-portfolio
+        run: npm run build
+      
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'new-portfolio/out'
+      
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
