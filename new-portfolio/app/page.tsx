@@ -3,6 +3,8 @@
 import { SplineScene } from "@/components/ui/spline"
 import { Card } from "@/components/ui/card"
 import { Spotlight } from "@/components/ui/spotlight"
+import Chatbot from "@/components/chatbot"
+import ContactForm from "@/components/contact-form"
 import { motion } from "framer-motion"
 import { Linkedin, Github, Mail, Phone, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -39,14 +41,13 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white">
-      {/* Navigation */}
+    <>
+      <div className="min-h-screen bg-black text-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <span className="text-xl font-bold text-green-400">RN</span>
             
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {['Home', 'About', 'Skills', 'Experience', 'Education', 'Projects', 'Contact'].map((item) => (
                 <button
@@ -61,7 +62,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-md hover:bg-white/10"
@@ -71,7 +71,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -93,7 +92,6 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Hero Section with Spline 3D */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16">
         <Card className="w-full max-w-7xl mx-4 bg-black/[0.96] relative overflow-hidden border border-white/10">
           <Spotlight
@@ -102,7 +100,6 @@ export default function Home() {
           />
           
           <div className="flex flex-col md:flex-row h-full min-h-[600px]">
-            {/* Left content */}
             <div className="flex-1 p-8 md:p-16 relative z-10 flex flex-col justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -142,7 +139,6 @@ export default function Home() {
               </motion.div>
             </div>
             
-            {/* Right content - Spline 3D */}
             <div className="flex-1 relative min-h-[400px] md:min-h-[600px]">
               <SplineScene 
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
@@ -153,7 +149,6 @@ export default function Home() {
         </Card>
       </section>
 
-      {/* About Section */}
       <section id="about" className="min-h-screen flex items-center justify-center py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
@@ -186,7 +181,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="min-h-screen flex items-center justify-center py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto w-full">
           <motion.h2
@@ -199,7 +193,6 @@ export default function Home() {
           </motion.h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Technical Skills */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -231,7 +224,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Data & Analytics */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -266,7 +258,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className="min-h-screen flex items-center justify-center py-20 px-4">
         <div className="max-w-4xl mx-auto w-full">
           <motion.h2
@@ -338,7 +329,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Education Section */}
       <section id="education" className="min-h-screen flex items-center justify-center py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto w-full">
           <motion.h2
@@ -390,7 +380,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="min-h-screen flex items-center justify-center py-20 px-4">
         <div className="max-w-6xl mx-auto w-full">
           <motion.h2
@@ -408,25 +397,50 @@ export default function Home() {
                 title: "SneakyFinds – Online Thrift Store",
                 tech: "E-commerce Platform | React.js | Firebase | EmailJS",
                 description: "SneakyFinds is a production-ready e-commerce platform designed specifically for thrift and pre-loved clothing stores. Built around a one-item inventory model where each product exists only once, it is ideal for vintage and thrift retail.",
-                link: "https://sneakyfinds.co.za/"
+                link: "https://sneakyfinds.co.za/",
+                video: "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/preview"
               },
               {
                 title: "Wow Foods – E-Commerce Platform",
                 tech: "Full-Stack Application | React 18 | Firebase | Vite",
                 description: "A comprehensive e-commerce solution for food delivery and online grocery shopping with real-time inventory management.",
-                link: "#"
+                link: "https://wow-foods-5edc4.web.app/",
+                video: null
+              },
+              {
+                title: "Lord's Driving School",
+                tech: "Full-Stack Application | React.js | Tailwind CSS | Firebase",
+                description: "A modern, full-stack web application for a local driving school with student registration, lesson scheduling, and instructor availability tracking.",
+                link: "https://lords-driving-school.web.app/",
+                video: "https://drive.google.com/file/d/1a4yMDXC3A-zfNsV62VH_CK5eSwj9b77S/preview"
+              },
+              {
+                title: "Internship & Job Placement Hub",
+                tech: "Job Portal Frontend | HTML/CSS/SCSS | JavaScript | Bootstrap 4",
+                description: "A modern, responsive job portal frontend designed to connect students and employers with role-based access and advanced job search.",
+                link: "https://github.com/RighteousNwariwe/Intern-Job-Portal",
+                video: "https://drive.google.com/file/d/1JN4yuV-NwyPFu4Pm1aRQAvfvYPzkXr9B/preview"
               },
               {
                 title: "ClearVue Sales Report System",
                 tech: "Full-Stack Application | MongoDB | Power BI | Python | Apache Kafka",
-                description: "A modern sales reporting and business intelligence system for ClearVue Ltd. Built with MongoDB for flexible data storage, Python/Pandas ETL pipelines, and Power BI for advanced analytics.",
-                link: "#"
+                description: "A modern sales reporting and business intelligence system for ClearVue Ltd with MongoDB, Python/Pandas ETL pipelines, and Power BI analytics.",
+                link: "https://github.com/RighteousNwariwe/ClearVue-Sales-Report",
+                video: "https://drive.google.com/file/d/1_0gVvQ1qMjvQTIfRuAoT2LmrE-AdxLiM/preview"
+              },
+              {
+                title: "AI Automation Internship Assignment",
+                tech: "AI Automation | JavaScript | Workflow Optimization",
+                description: "An AI-driven automation assignment focusing on intelligent task automation, process efficiency, and practical AI integration for business workflows.",
+                link: "https://docs.google.com/spreadsheets/d/1hD698_710CCJ_qr7qVtsz3MDTm8CxAvz9PSM6CffqVs/edit?usp=sharing",
+                video: "https://drive.google.com/file/d/1wREhl5bwdIhyAe9YNH_raxSR_TjTE8DH/preview"
               },
               {
                 title: "RighteousDev – Freelance Developer Portfolio",
                 tech: "Personal Portfolio | HTML | CSS | JavaScript",
                 description: "My professional freelance developer portfolio showcasing web development services, past projects, and technical expertise.",
-                link: "https://righteousdev.netlify.app/"
+                link: "https://righteousdev.netlify.app/",
+                video: null
               }
             ].map((project, index) => (
               <motion.div
@@ -440,6 +454,18 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-green-400 mb-2">{project.title}</h3>
                 <p className="text-sm text-gray-400 mb-3">{project.tech}</p>
                 <p className="text-gray-300 mb-4">{project.description}</p>
+                {project.video && (
+                  <div className="mb-4 rounded-xl overflow-hidden">
+                    <iframe
+                      src={project.video}
+                      width="100%"
+                      height="380"
+                      allow="autoplay"
+                      allowFullScreen
+                      className="border-0"
+                    />
+                  </div>
+                )}
                 {project.link !== "#" && (
                   <a
                     href={project.link}
@@ -472,9 +498,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center py-20 px-4 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-4xl mx-auto w-full">
+        <div className="max-w-6xl mx-auto w-full">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -492,68 +517,73 @@ export default function Home() {
             I'm always open to opportunities and collaborations. Reach out through any channel below!
           </motion.p>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: Mail,
-                title: "Email",
-                description: "Send me an email anytime. I'll respond as soon as possible.",
-                link: "mailto:righteousonyedi@gmail.com",
-                value: "righteousonyedi@gmail.com"
-              },
-              {
-                icon: Linkedin,
-                title: "LinkedIn",
-                description: "Connect with me on LinkedIn for professional networking.",
-                link: "https://www.linkedin.com/in/righteous-nwariwe-01023727a",
-                value: "View Profile"
-              },
-              {
-                icon: Github,
-                title: "GitHub",
-                description: "Check out my projects and code contributions.",
-                link: "https://github.com/RighteousNwariwe",
-                value: "Projects"
-              },
-              {
-                icon: Phone,
-                title: "Phone",
-                description: "Call me directly for urgent matters or quick chats.",
-                link: "tel:0680022727",
-                value: "068 002 2727"
-              }
-            ].map((contact, index) => (
-              <motion.a
-                key={index}
-                href={contact.link}
-                target={contact.link.startsWith('http') ? '_blank' : undefined}
-                rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/50 transition-colors group"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-green-500/20 rounded-full group-hover:bg-green-500 group-hover:text-black transition-colors">
-                    <contact.icon size={24} />
+          <div className="grid lg:grid-cols-2 gap-8">
+            <ContactForm />
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: Mail,
+                  title: "Email",
+                  description: "Send me an email anytime. I'll respond as soon as possible.",
+                  link: "mailto:righteousonyedi@gmail.com",
+                  value: "righteousonyedi@gmail.com"
+                },
+                {
+                  icon: Linkedin,
+                  title: "LinkedIn",
+                  description: "Connect with me on LinkedIn for professional networking.",
+                  link: "https://www.linkedin.com/in/righteous-nwariwe-01023727a",
+                  value: "View Profile"
+                },
+                {
+                  icon: Github,
+                  title: "GitHub",
+                  description: "Check out my projects and code contributions.",
+                  link: "https://github.com/RighteousNwariwe",
+                  value: "Projects"
+                },
+                {
+                  icon: Phone,
+                  title: "Phone",
+                  description: "Call me directly for urgent matters or quick chats.",
+                  link: "tel:0680022727",
+                  value: "068 002 2727"
+                }
+              ].map((contact, index) => (
+                <motion.a
+                  key={index}
+                  href={contact.link}
+                  target={contact.link.startsWith('http') ? '_blank' : undefined}
+                  rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/50 transition-colors group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-green-500/20 rounded-full group-hover:bg-green-500 group-hover:text-black transition-colors">
+                      <contact.icon size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-1">{contact.title}</h3>
+                      <p className="text-gray-400 text-sm mb-2">{contact.description}</p>
+                      <p className="text-green-400 font-medium">{contact.value}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-1">{contact.title}</h3>
-                    <p className="text-gray-400 text-sm mb-2">{contact.description}</p>
-                    <p className="text-green-400 font-medium">{contact.value}</p>
-                  </div>
-                </div>
-              </motion.a>
-            ))}
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-8 border-t border-white/10 text-center text-gray-400">
         <p>© 2025 Righteous Nwariwe. All rights reserved.</p>
       </footer>
-    </main>
+    </div>
+    <Chatbot />
+    </>
   )
 }
