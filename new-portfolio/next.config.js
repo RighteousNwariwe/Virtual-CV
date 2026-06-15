@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@splinetool/react-spline'],
   output: 'export',
+  basePath: '/Virtual-Portfolio',
+  assetPrefix: '/Virtual-Portfolio/',
   images: {
     unoptimized: true
   }
