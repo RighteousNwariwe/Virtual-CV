@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Spotlight } from "@/components/ui/spotlight"
 import Chatbot from "@/components/chatbot"
 import ContactForm from "@/components/contact-form"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Linkedin, Github, Mail, Phone, Menu, X, Download } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -107,14 +108,16 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20">
-                  <img 
-                    src="/grad-pic.jpeg" 
-                    alt="Graduation Picture" 
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      e.currentTarget.parentElement!.innerHTML = '<span class="text-4xl">🎓</span>'
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20 relative">
+                  <Image
+                    src="/grad-pic.jpeg"
+                    alt="Graduation Picture"
+                    fill
+                    priority
+                    quality={90}
+                    className="object-cover"
+                    onError={() => {
+                      // Fallback if image fails to load
                     }}
                   />
                 </div>
@@ -188,7 +191,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8"
           >
-            I am a full-stack developer and data professional with a BSc in Information Technology and hands-on experience building production e-commerce platforms, BI dashboards, and ETL pipelines. Skilled in <strong className="text-green-400">Python, SQL, JavaScript, React, Firebase, Power BI, Pandas, and Excel</strong>, I turn raw data into actionable insights and scalable web applications. From real-time analytics with Apache Kafka to React-based storefronts deployed on Firebase Hosting, I deliver end-to-end solutions that solve real business problems.
+            I am a full-stack developer and data professional with a BSc in Information Technology and hands-on experience building production e-commerce platforms, BI dashboards, and ETL pipelines. I combine technical expertise with a passion for creating solutions that drive business growth and deliver exceptional user experiences.
           </motion.p>
           <motion.button
             initial={{ opacity: 0, y: 20 }}
@@ -491,7 +494,7 @@ export default function Home() {
               {
                 title: "SneakyFinds – Online Thrift Store",
                 tech: "E-commerce Platform | React.js | Firebase | EmailJS",
-                description: "SneakyFinds is a production-ready e-commerce platform designed specifically for thrift and pre-loved clothing stores. Built around a one-item inventory model where each product exists only once, it is ideal for vintage and thrift retail.",
+                description: "SneakyFinds is a production-ready e-commerce platform designed specifically for thrift and pre-loved clothing stores. Built around a one-item inventory model where each listing represents a unique garment.",
                 link: "https://sneakyfinds.co.za/",
                 video: "https://drive.google.com/file/d/1Z_EK1k-DJOM0QcKxzrL8WC9yW8AsVdI5/preview"
               },
