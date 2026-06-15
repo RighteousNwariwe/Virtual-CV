@@ -551,16 +551,26 @@ export default function Home() {
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 {project.video && (
                   <div className="mb-4 rounded-xl overflow-hidden">
-                    <iframe
-                      src={project.video}
-                      width="100%"
-                      height="380"
-                      allow="autoplay"
-                      allowFullScreen
-                      className="border-0"
-                      style={{ border: 'none' }}
-                      loading="lazy"
-                    />
+                    <div className="relative bg-gray-900 rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                      <iframe
+                        src={project.video}
+                        className="absolute inset-0 w-full h-full border-0"
+                        allow="autoplay"
+                        allowFullScreen
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none'
+                          e.currentTarget.parentElement!.innerHTML = `
+                            <div class="flex flex-col items-center justify-center h-full p-8 text-center">
+                              <p class="text-gray-400 mb-4">Video unavailable due to Google Drive restrictions</p>
+                              <a href="${project.video}" target="_blank" rel="noopener" class="text-green-400 hover:text-green-300 underline">
+                                Click here to view video on Google Drive
+                              </a>
+                            </div>
+                          `
+                        }}
+                      />
+                    </div>
                   </div>
                 )}
                 {project.link !== "#" && (
