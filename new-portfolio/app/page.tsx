@@ -108,16 +108,17 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20 relative">
-                  <Image
-                    src="/grad-pic.jpeg"
-                    alt="Graduation Picture"
-                    fill
-                    priority
-                    quality={90}
-                    className="object-cover"
-                    onError={() => {
-                      // Fallback if image fails to load
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20">
+                  <img 
+                    src="/Virtual-Portfolio/grad-pic.jpeg" 
+                    alt="Graduation Picture" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement
+                      target.style.display = 'none'
+                      if (target.parentElement) {
+                        target.parentElement.innerHTML = '<span class="text-4xl">🎓</span>'
+                      }
                     }}
                   />
                 </div>
@@ -155,7 +156,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  onClick={() => window.open('/Full Stack Developer CV(Righteous Nwaiwe).pdf', '_blank')}
+                  onClick={() => window.open('/Virtual-Portfolio/Full Stack Developer CV(Righteous Nwaiwe).pdf', '_blank')}
                   className="flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-bold rounded-full hover:bg-green-400 transition-colors mx-auto"
                 >
                   <Download size={20} />
@@ -371,25 +372,25 @@ export default function Home() {
                 title: "BSc in Information Technology",
                 institution: "North-West University, Vanderbijlpark",
                 period: "Feb 2023 - 2025",
-                certificate: "/Final year AcademicRecord_43511139                      .pdf"
+                certificate: "/Virtual-Portfolio/Final year AcademicRecord_43511139                      .pdf"
               },
               {
                 title: "Diploma in Quantum Computing & Programming",
                 institution: "QSouthAfrica",
                 period: "July 2023",
-                certificate: "/QBronze109-139.pdf"
+                certificate: "/Virtual-Portfolio/QBronze109-139.pdf"
               },
               {
                 title: "FNB App Academy 2025 - Full Stack Development Certificate",
                 institution: "FNB",
                 period: "24 July 2025",
-                certificate: "/Righteous FNB App academy certificate.pdf"
+                certificate: "/Virtual-Portfolio/Righteous FNB App academy certificate.pdf"
               },
               {
                 title: "Introduction to SQL Certificate",
                 institution: "Sololearn",
                 period: "07 January, 2026",
-                certificate: "/Introduction to SQL(Certificate).pdf"
+                certificate: "/Virtual-Portfolio/Introduction to SQL(Certificate).pdf"
               }
             ].map((edu, index) => (
               <motion.div
@@ -439,17 +440,17 @@ export default function Home() {
               {
                 title: "Data Analyst CV",
                 description: "Curriculum Vitae focused on data analysis roles",
-                link: "/Data Analyst CV(Righteous Nwariwe).pdf"
+                link: "/Virtual-Portfolio/Data Analyst CV(Righteous Nwariwe).pdf"
               },
               {
                 title: "Data Scientist CV",
                 description: "Curriculum Vitae focused on data science roles",
-                link: "/Data Scientist CV(Righteous Nwariwe).pdf"
+                link: "/Virtual-Portfolio/Data Scientist CV(Righteous Nwariwe).pdf"
               },
               {
                 title: "Completion Letter",
                 description: "Academic completion letter from university",
-                link: "/Completion letter 43511139_Nwariwe_Rightous Onyedi Nhlanhla Mpila_CompletionLetter.pdf"
+                link: "/Virtual-Portfolio/Completion letter 43511139_Nwariwe_Rightous Onyedi Nhlanhla Mpila_CompletionLetter.pdf"
               }
             ].map((doc, index) => (
               <motion.a
