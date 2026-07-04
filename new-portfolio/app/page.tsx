@@ -110,7 +110,7 @@ export default function Home() {
               >
                 <div className="w-40 h-48 md:w-52 md:h-64 rounded-2xl bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl">
                   <img 
-                    src="/Virtual-Portfolio/grad-pic.jpeg" 
+                    src="/Virtual-Portfolio/Grad-pic.JPG" 
                     alt="Righteous Nwariwe" 
                     className="w-full h-full object-cover"
                   />
