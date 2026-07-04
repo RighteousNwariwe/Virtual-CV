@@ -514,7 +514,8 @@ export default function Home() {
                 tech: "Full-Stack Application | React 18 | Firebase | Vite",
                 description: "A comprehensive e-commerce solution for food delivery and online grocery shopping with real-time inventory management.",
                 link: "https://wow-foods-5edc4.web.app/",
-                video: null
+                video: null,
+                image: "/Wow Foods.png"
               },
               {
                 title: "Lord's Driving School",
