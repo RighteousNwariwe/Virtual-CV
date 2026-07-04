@@ -110,16 +110,9 @@ export default function Home() {
               >
                 <div className="w-40 h-48 md:w-52 md:h-64 rounded-2xl bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl">
                   <img 
-                    src="/grad-pic.jpeg" 
+                    src="/Virtual-Portfolio/grad-pic.jpeg" 
                     alt="Righteous Nwariwe" 
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement
-                      target.style.display = 'none'
-                      if (target.parentElement) {
-                        target.parentElement.innerHTML = '<span class="text-4xl">🎓</span>'
-                      }
-                    }}
                   />
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400 mb-4">
@@ -515,7 +508,7 @@ export default function Home() {
                 description: "A comprehensive e-commerce solution for food delivery and online grocery shopping with real-time inventory management.",
                 link: "https://wow-foods-5edc4.web.app/",
                 video: null,
-                image: "/Wow Foods.png"
+                image: "/Virtual-Portfolio/Wow Foods.png"
               },
               {
                 title: "Lord's Driving School",
@@ -551,7 +544,7 @@ export default function Home() {
                 description: "My professional freelance developer portfolio showcasing web development services, past projects, and technical expertise.",
                 link: "https://righteousdev.netlify.app/",
                 video: null,
-                image: "/RighteousWebDev site.png"
+                image: "/Virtual-Portfolio/RighteousWebDev site.png"
               },
               {
                 title: "MMJ Driving School",
