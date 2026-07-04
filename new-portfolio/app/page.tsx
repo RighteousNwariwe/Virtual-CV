@@ -108,10 +108,10 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20">
+                <div className="w-40 h-48 md:w-52 md:h-64 rounded-2xl bg-gradient-to-br from-green-400 to-blue-500 mb-6 flex items-center justify-center overflow-hidden border-4 border-white/20 shadow-2xl">
                   <img 
-                    src="/Virtual-Portfolio/grad-pic.jpeg" 
-                    alt="Graduation Picture" 
+                    src="/grad-pic.jpeg" 
+                    alt="Righteous Nwariwe" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement
@@ -156,7 +156,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  onClick={() => window.open('/Virtual-Portfolio/Full Stack Developer CV(Righteous Nwaiwe).pdf', '_blank')}
+                  onClick={() => window.open('/Full Stack Developer CV(Righteous Nwaiwe).pdf', '_blank')}
                   className="flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-bold rounded-full hover:bg-green-400 transition-colors mx-auto"
                 >
                   <Download size={20} />
@@ -391,6 +391,13 @@ export default function Home() {
                 institution: "Sololearn",
                 period: "07 January, 2026",
                 certificate: "/Virtual-Portfolio/Introduction to SQL(Certificate).pdf"
+              },
+              {
+                title: "Basics of Data Analysis with Excel",
+                institution: "Alison",
+                period: "Issued Apr 2026",
+                certificate: "/Basics of Data Analysis with Excel.pdf",
+                credentialId: "Credential ID 6112-55564236"
               }
             ].map((edu, index) => (
               <motion.div
@@ -406,6 +413,9 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-green-400">{edu.title}</h3>
                     <p className="text-gray-400">{edu.institution}</p>
                     <p className="text-sm text-gray-500">{edu.period}</p>
+                    {edu.credentialId && (
+                      <p className="text-xs text-gray-600 mt-1">{edu.credentialId}</p>
+                    )}
                   </div>
                   {edu.certificate && (
                     <a
@@ -539,7 +549,15 @@ export default function Home() {
                 tech: "Personal Portfolio | HTML | CSS | JavaScript",
                 description: "My professional freelance developer portfolio showcasing web development services, past projects, and technical expertise.",
                 link: "https://righteousdev.netlify.app/",
-                video: null
+                video: null,
+                image: "/RighteousWebDev site.png"
+              },
+              {
+                title: "MMJ Driving School",
+                tech: "React 18 | Vite | Supabase | React Router | CSS",
+                description: "Modern, interactive React + Vite website for MMJ Driving School in Germiston, South Africa. Features include Supabase authentication, storage for gallery images, admin dashboard, and mobile-responsive design with car-themed animations.",
+                link: "#",
+                video: "https://drive.google.com/file/d/1IBB6MxJeArQ888Mu62RaJLnt63RVPlV7/preview"
               }
             ].map((project, index) => (
               <motion.div
@@ -552,6 +570,15 @@ export default function Home() {
               >
                 <h3 className="text-xl font-bold text-green-400 mb-2">{project.title}</h3>
                 <p className="text-sm text-gray-400 mb-3">{project.tech}</p>
+                {project.image && (
+                  <div className="mb-4 rounded-xl overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                )}
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 {project.video && (
                   <div className="mb-4 rounded-xl overflow-hidden">
