@@ -119,7 +119,7 @@ export default function Home() {
                   Righteous Nwariwe
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-6">
-                  Full-Stack Developer | Data Scientist | Data Analyst
+                  AI Engineer | Full-Stack Developer
                 </p>
                 <div className="flex gap-4 mb-8 justify-center">
                   <a
@@ -185,7 +185,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8"
           >
-            I am a full-stack developer and data professional with a BSc in Information Technology and hands-on experience building production e-commerce platforms, BI dashboards, and ETL pipelines. I combine technical expertise with a passion for creating solutions that drive business growth and deliver exceptional user experiences.
+            IT graduate and full stack developer with hands-on experience analysing business data, building reporting and automation workflows, and supporting cross-functional stakeholders. Currently completing a machine learning internship applying real search-intelligence data to build and evaluate ML pipelines, with further practical exposure to data pipelines, dashboarding, and AI-assisted data classification through project work integrating SQL, Power BI, Apache Kafka, and REST APIs. Strong analytical, documentation, and communication skills, with a structured, self-driven approach to learning new tools and translating business needs into technical solutions. Seeking to apply these skills to identify and support AI, automation, and process-improvement opportunities as an AI Junior Analyst.
           </motion.p>
           <motion.button
             initial={{ opacity: 0, y: 20 }}
@@ -218,12 +218,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
             >
-              <h3 className="text-2xl font-bold mb-4 text-green-400">Technical Skills</h3>
+              <h3 className="text-2xl font-bold mb-4 text-green-400">AI & Machine Learning</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold mb-2">Languages & Frameworks</h4>
+                  <h4 className="font-semibold mb-2">ML Techniques</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Python', 'C#', 'HTML/CSS', 'JavaScript', 'React.js', 'Tailwind CSS', 'Node.js', 'Java', 'SQL'].map((skill) => (
+                    {['Logistic Regression', 'Decision Tree', 'Random Forest', 'Gradient Boosting', 'Feature Engineering', 'Data-Leakage Prevention', 'Model Evaluation'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
                         {skill}
                       </span>
@@ -231,9 +231,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Database & DevOps</h4>
+                  <h4 className="font-semibold mb-2">ML Libraries</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['MySQL', 'MongoDB', 'Git', 'Oracle', 'Firebase', 'Vite'].map((skill) => (
+                    {['scikit-learn', 'pandas', 'Python', 'Google Colab'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">
                         {skill}
                       </span>
@@ -249,12 +249,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
             >
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">Data & Analytics</h3>
+              <h3 className="text-2xl font-bold mb-4 text-blue-400">Programming & Development</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold mb-2">Data Tools</h4>
+                  <h4 className="font-semibold mb-2">Languages & Frameworks</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Power BI', 'Pandas', 'Excel', 'Apache Kafka', 'ETL Pipelines'].map((skill) => (
+                    {['Python', 'C#', 'HTML/CSS', 'JavaScript', 'React.js', 'Tailwind CSS', 'Node.js', 'Java', 'SQL', 'REST APIs'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">
                         {skill}
                       </span>
@@ -262,9 +262,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Development</h4>
+                  <h4 className="font-semibold mb-2">Databases & Cloud</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['REST APIs', 'Firebase Hosting', 'SEO Optimization', 'Responsive Design'].map((skill) => (
+                    {['MySQL', 'MongoDB', 'Firebase', 'Microsoft SQL Server', 'Oracle Database'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">
                         {skill}
                       </span>
@@ -290,6 +290,19 @@ export default function Home() {
           
           <div className="space-y-6">
             {[
+              {
+                title: "Machine Learning Intern (AI Engineering Track)",
+                company: "FlyRank AI (Remote)",
+                period: "July 2026 – Present",
+                points: [
+                  "Completing a hands-on machine learning internship, applying real search-intelligence data (Search Console, Analytics, BigQuery warehouse, Hugging Face datasets) to build and evaluate end-to-end ML pipelines.",
+                  "Framed a search-analytics research question into a concrete ML task, defining the unit of analysis, prediction target, success metric, and business action supported by the output.",
+                  "Wrote a data contract for a search-intelligence dataset slice, verifying data grain, availability, and date coverage through SQL queries, then engineered features validated against data-leakage risk.",
+                  "Built a baseline rule-based action-scoring system with reason codes and validated signals, then critically reviewed top-ranked outputs for accuracy.",
+                  "Developing and evaluating supervised ML models (Logistic Regression, Decision Tree, Random Forest, Gradient Boosting) against the baseline using grouped validation and permutation importance for feature interpretation.",
+                  "Working in Python (pandas, scikit-learn) within Google Colab, with all deliverables version-controlled and documented on GitHub."
+                ]
+              },
               {
                 title: "Full Stack Developer",
                 company: "SneakyFinds Pty Ltd",
