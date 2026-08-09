@@ -454,16 +454,6 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Data Analyst CV",
-                description: "Curriculum Vitae focused on data analysis roles",
-                link: "/Virtual-Portfolio/Data Analyst CV(Righteous Nwariwe).pdf"
-              },
-              {
-                title: "Data Scientist CV",
-                description: "Curriculum Vitae focused on data science roles",
-                link: "/Virtual-Portfolio/Data Scientist CV(Righteous Nwariwe).pdf"
-              },
-              {
                 title: "Completion Letter",
                 description: "Academic completion letter from university",
                 link: "/Virtual-Portfolio/Completion letter 43511139_Nwariwe_Rightous Onyedi Nhlanhla Mpila_CompletionLetter.pdf"
