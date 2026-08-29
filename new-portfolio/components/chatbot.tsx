@@ -16,7 +16,7 @@ export default function Chatbot() {
     experience: "Righteous has worked as a Full Stack Developer at SneakyFinds Pty Ltd, Data Analytics & Engineering at ClearVue Business Intelligence System, and as a Freelance Web Developer. He's also been a Recruitment Officer at Geekulcha.",
     education: "Righteous holds a BSc in Information Technology from North-West University. He also has certifications in Quantum Computing, Full Stack Development from FNB App Academy, and SQL from Sololearn.",
     projects: "Righteous has built several major projects including SneakyFinds (e-commerce platform), Wow Foods (food delivery app), Lord's Driving School (driving school management), ClearVue Sales Report System (BI dashboard), and more!",
-    contact: "You can reach Righteous via email at righteousonyedi@gmail.com, LinkedIn at linkedin.com/in/righteous-nwariwe-01023727a, or phone at 068 002 2727.",
+    contact: "You can reach Righteous via email at righteousonyedi@gmail.com, LinkedIn at linkedin.com/in/righteous-nwariwe-01023727a, or phone at 069 277 0660.",
     default: "I can help you learn about Righteous's skills, experience, education, projects, or contact information. What would you like to know?"
   }
 

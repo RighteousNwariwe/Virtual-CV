@@ -555,6 +555,14 @@ export default function Home() {
                 description: "Modern, interactive React + Vite website for MMJ Driving School in Germiston, South Africa. Features include Supabase authentication, storage for gallery images, admin dashboard, and mobile-responsive design with car-themed animations.",
                 link: "#",
                 video: "https://drive.google.com/file/d/1IBB6MxJeArQ888Mu62RaJLnt63RVPlV7/preview"
+              },
+              {
+                title: "Just-Beauty",
+                tech: "Hair, Cosmetics and Beauty Salon | React Application | Static Site",
+                description: "A small responsive website and admin portal for a hair, cosmetics, and beauty salon. Includes customer-facing pages for booking/service requests, protected admin portal with Firebase authentication, real-time updates, dashboard statistics, and email notifications via EmailJS.",
+                link: "https://justbeauty.co.za/",
+                video: null,
+                image: "/Just Beauty.png"
               }
             ].map((project, index) => (
               <motion.div
@@ -682,8 +690,8 @@ export default function Home() {
                   icon: Phone,
                   title: "Phone",
                   description: "Call me directly for urgent matters or quick chats.",
-                  link: "tel:0680022727",
-                  value: "068 002 2727"
+                  link: "tel:0692770660",
+                  value: "069 277 0660"
                 }
               ].map((contact, index) => (
                 <motion.a

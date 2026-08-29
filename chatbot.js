@@ -160,7 +160,7 @@ class PortfolioChatbot {
             },
             contact: {
                 email: "righteousonyedi@gmail.com",
-                phone: "068 002 2727",
+                phone: "069 277 0660",
                 linkedin: "https://www.linkedin.com/in/righteous-nwariwe-01023727a",
                 github: "https://github.com/RighteousNwariwe",
                 portfolio: "https://righteousnwariwe.github.io/Virtual-Portfolio/"
